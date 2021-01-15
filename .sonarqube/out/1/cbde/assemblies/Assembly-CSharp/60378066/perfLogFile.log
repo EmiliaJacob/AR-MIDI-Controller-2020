@@ -1,0 +1,314 @@
+File name	Line	Function	Duration[ms]	Explored nodes
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs	19	_ApplicationManager.Awake$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs	40	_ApplicationManager.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs	48	_ApplicationManager.HandlePrivacyPolicyAccepted$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs	58	_ApplicationManager.ForceInstructions$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs	69	_ApplicationManager.HandleHowToInstructionsFinished$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs	77	_ApplicationManager.HandleHowToInstructionsSkipped$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	18	_ARCubeInteraction.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	23	_ARCubeInteraction.Initialize$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	37	_ARCubeInteraction.OnTriggerStay$UnityEngine.Collider$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	48	_ARCubeInteraction.MoveWhenGrab$UnityEngine.Collider$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	65	_ARCubeInteraction.RotateWhenHolding$UnityEngine.Collider$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	77	_ARCubeInteraction.SpawnWhenClicking$UnityEngine.Collider$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	89	_ARCubeInteraction.OnTriggerEnter$UnityEngine.Collider$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs	102	_ARCubeInteraction.OnTriggerExit$UnityEngine.Collider$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\ArState.cs	7	_ArState.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\ArState.cs	12	_ArState.CheckForTrackingState$UnityEngine.XR.ARFoundation.ARSessionStateChangedEventArgs$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\BoundingBoxUI.cs	16	_BoundingBoxUI.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\BoundingBoxUI.cs	38	_BoundingBoxUI.UpdateInfo$BoundingBox$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\BWEffect.cs	10	_BWEffect.Awake$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\BWEffect.cs	16	_BWEffect.OnRenderImage$UnityEngine.RenderTexture.UnityEngine.RenderTexture$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs	28	_CategoryManager.Awake$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs	36	_CategoryManager.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs	42	_CategoryManager.SetupMenu$System.Collections.Generic.List$ManoMotion.UI.Buttons.UIIconBehavior.IconFunctionality$$	79	1461
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs	69	_CategoryManager.PositionCategories$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs	96	_CategoryManager.GetAllIconBehaviors$$	24	803
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\Category.cs	30	_Category.Awake$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\Category.cs	35	_Category.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\Category.cs	45	_Category.InitializeUIValues$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\Category.cs	60	_Category.CalculateDimensions$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\Category.cs	112	_Category.InitializeIconBehaviors$$	13	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs	24	_CubeGameManager.Awake$$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs	39	_CubeGameManager.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs	70	_CubeGameManager.AwardPoints$int$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs	86	_CubeGameManager.HandleManoMotionFrameProcessed$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs	128	_CubeGameManager.FireAt$GestureInfo$	0	17
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeSpawn.cs	23	_CubeSpawn.InitializeCubeParts$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeSpawn.cs	30	_CubeSpawn.AwardPoints$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeSpawn.cs	36	_CubeSpawn.Randomize$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs	7	_DetectionInstruction.OnEnable$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs	12	_DetectionInstruction.InitializeInstruction$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs	30	_DetectionInstruction.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs	74	_DetectionInstruction.ProgressWithInstructionStep$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs	89	_DetectionInstruction.GuideHowTo$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs	99	_DetectionInstruction.StopResponding$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\ExampleDetectionCanvas.cs	27	_ExampleDetectionCanvas.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\ExampleDetectionCanvas.cs	34	_ExampleDetectionCanvas.HandleShowBoundingBoxValueChanged$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Detection\Scripts\ExampleDetectionEdges.cs	15	_ExampleDetectionEdges.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Detection\Scripts\ExampleDetectionEdges.cs	23	_ExampleDetectionEdges.HandleManoMotionFrameUpdated$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Detection\Scripts\ExampleDetectionEdges.cs	75	_ExampleDetectionEdges.FadeOut$UnityEngine.UI.Image$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Detection\Scripts\ExampleDetectionEdges.cs	91	_ExampleDetectionEdges.FadeIn$UnityEngine.UI.Image$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs	19	_ExampleSpooky.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs	31	_ExampleSpooky.HandleManoMotionFrameUpdated$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs	48	_ExampleSpooky.MoveAndScaleSpookey$TrackingInfo.Warning$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs	88	_ExampleSpooky.HighlightSpookeyImage$Warning$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs	104	_ExampleSpooky.FadeOut$UnityEngine.UI.Image$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs	118	_ExampleSpooky.FadeIn$UnityEngine.UI.Image$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\FollowHand.cs	7	_FollowHand.Start$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\FollowHand.cs	12	_FollowHand.Update$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\FollowHand.cs	20	_FollowHand.TrackMovement$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	17	_GestureInstruction.OnEnable$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	22	_GestureInstruction.PopulateTriggerList$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	46	_GestureInstruction.InitializeInstruction$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	66	_GestureInstruction.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	151	_GestureInstruction.ProgressWithInstructionStep$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	178	_GestureInstruction.UpdateTriggerGestureDescription$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	286	_GestureInstruction.GuideHowTo$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs	298	_GestureInstruction.StopResponding$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	260	_GizmoManager.Start$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	274	_GizmoManager.Initialize$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	286	_GizmoManager.DisplayInformationAfterManoMotionProcessFrame$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	313	_GizmoManager.DisplayDepthEstimation$float$	0	23
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	336	_GizmoManager.DisplayCurrentsmoothingValue$Session$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	348	_GizmoManager.DisplayCurrentGestureSmoothingValue$Session$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	360	_GizmoManager.DisplayPalmCenter$UnityEngine.Vector3.GestureInfo.Warning$	0	17
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	550	_GizmoManager.DisplayHandState$int$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	565	_GizmoManager.DisplayTriggerGesture$ManoGestureTrigger.TrackingInfo$	37	822
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	617	_GizmoManager.InitializeTriggerPool$$	13	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	632	_GizmoManager.GetCurrentPooledTrigger$$	20	503
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	648	_GizmoManager.TriggerDisplay$TrackingInfo.ManoGestureTrigger$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	665	_GizmoManager.HighlightStatesToStateDetection$int$	7	616
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	684	_GizmoManager.DisplayApproachingToEdgeFlags$Warning$	0	12
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	710	_GizmoManager.ShouldDisplaySmoothingSlider$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	718	_GizmoManager.DisplaySmoothingSlider$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	727	_GizmoManager.SetGestureDescriptionParts$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs	742	_GizmoManager.InitializeFlagParts$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\GrabPass.cs	16	_GrabPass.Awake$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\GrabPass.cs	25	_GrabPass.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\Grayscale.cs	9	_Grayscale.Awake$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\Grayscale.cs	15	_Grayscale.OnRenderImage$UnityEngine.RenderTexture.UnityEngine.RenderTexture$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\HandCollider.cs	28	_HandCollider.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\HandCollider.cs	36	_HandCollider.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	6	_HandSideInstruction.OnEnable$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	11	_HandSideInstruction.InitializeInstruction$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	32	_HandSideInstruction.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	43	_HandSideInstruction.RepondToUserActions$$	0	9
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	67	_HandSideInstruction.ProgressWithInstructionStep$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	102	_HandSideInstruction.GuideHowTo$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs	111	_HandSideInstruction.StopResponding$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	32	_HowToAnimations.ShouldShowCheckMark$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	38	_HowToAnimations.HighlightImagesUpToStep$int$	7	626
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	61	_HowToAnimations.ShouldDisplayImageSteps$bool$	11	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	69	_HowToAnimations.ShouldShowAnimationImage$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	96	_HowToAnimations.ShouldShowHandOutlineImage$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	108	_HowToAnimations.ShowHowToPick$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	112	_HowToAnimations.ShowHowToDrop$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	117	_HowToAnimations.ShowHowToClick$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	122	_HowToAnimations.ShowHowToGrab$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs	127	_HowToAnimations.ShowHowToRelease$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	57	_ManoMotion.HowToUse.HowToInstructor.Awake$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	66	_ManoMotion.HowToUse.HowToInstructor.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	71	_ManoMotion.HowToUse.HowToInstructor.DisplayFirstTimeInstructions$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	79	_ManoMotion.HowToUse.HowToInstructor.RetrieveInstructionsHistory$$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	216	_ManoMotion.HowToUse.HowToInstructor.ProgressWithNextInstruction$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	228	_ManoMotion.HowToUse.HowToInstructor.SkipInstructions$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	239	_ManoMotion.HowToUse.HowToInstructor.ConfirmInstructionSeen$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	265	_ManoMotion.HowToUse.HowToInstructor.ShouldDisplayCard$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	273	_ManoMotion.HowToUse.HowToInstructor.ShouldDisplayInstructions$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	284	_ManoMotion.HowToUse.HowToInstructor.PlaceTextOnCard$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	296	_ManoMotion.HowToUse.HowToInstructor.IllustrateCurrentInstructionOnCanvas$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	306	_ManoMotion.HowToUse.HowToInstructor.UpdateCurrentInstructionStepOnCanvas$string$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	317	_ManoMotion.HowToUse.HowToInstructor.HighlightInstructionsBackground$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	326	_ManoMotion.HowToUse.HowToInstructor.HandleInstructionsHighlight$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	347	_ManoMotion.HowToUse.HowToInstructor.AreAllInstructionFinished$$	18	503
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	362	_ManoMotion.HowToUse.HowToInstructor.ShowCurrentInstructionOnCanvas$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	377	_ManoMotion.HowToUse.HowToInstructor.HighlightConfirmation$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	389	_ManoMotion.HowToUse.HowToInstructor.DehighlightConfirmation$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	400	_ManoMotion.HowToUse.HowToInstructor.CloseHowToInstructions$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs	409	_ManoMotion.HowToUse.HowToInstructor.ShouldShowTriggerAnimationVisuals$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\IconMainMenu.cs	12	_IconMainMenu.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\IconMainMenu.cs	17	_IconMainMenu.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\IconMainMenu.cs	25	_IconMainMenu.CheckForScreenOrientationChange$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\IconMainMenu.cs	34	_IconMainMenu.OnEnable$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	31	_InputManagerArFoundation.Awake$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	43	_InputManagerArFoundation.GetInputScaleValue$int$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	51	_InputManagerArFoundation.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	59	_InputManagerArFoundation.InitializeInputParameters$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	90	_InputManagerArFoundation.HandleOrientationChanged$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	134	_InputManagerArFoundation.ResizeInputRenderTexture$int.int$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	149	_InputManagerArFoundation.ResizeCurrentFrameTexture$int.int$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	170	_InputManagerArFoundation.LateUpdate$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	215	_InputManagerArFoundation.OnApplicationFocus$bool$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs	224	_InputManagerArFoundation.OnApplicationPause$bool$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs	14	_InputManagerBaseClass.ResizeCurrentFrameTexture$int.int$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs	24	_InputManagerBaseClass.ForceApplicationPermissions$$	0	23
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs	48	_InputManagerBaseClass.StoragePermisionCheck$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs	62	_InputManagerBaseClass.UpdateFrame$T$$T$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs	63	_InputManagerBaseClass.UpdateFrame$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	22	_InputManagerPhoneCamera.Awake$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	28	_InputManagerPhoneCamera.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	36	_InputManagerPhoneCamera.InitializeInputParameters$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	58	_InputManagerPhoneCamera.InitializeManoMotionFrame$$	0	14
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	91	_InputManagerPhoneCamera.GetCameraFrameInformation$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	125	_InputManagerPhoneCamera.ResizeManoMotionFrameResolution$int.int$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	141	_InputManagerPhoneCamera.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	147	_InputManagerPhoneCamera.OnEnable$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	177	_InputManagerPhoneCamera.OnApplicationFocus$bool$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs	187	_InputManagerPhoneCamera.OnApplicationPause$bool$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\InstructionVisualization.cs	7	_InstructionVisualization.Start$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\InstructionVisualization.cs	12	_InstructionVisualization.Update$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	22	_Instruction.GetAllStepInstructions$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	31	_Instruction.GetStepInstructions$int$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	40	_Instruction.GetInstructionCanvasText$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	48	_Instruction.GetInstructionCardText$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	56	_Instruction.GetInstructionID$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	64	_Instruction.GetInstructionCardTitle$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	73	_Instruction.HasBeenSeen$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	81	_Instruction.DeclareInstructionSeen$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	88	_Instruction.DeclareInstructionNotSeen$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	96	_Instruction.SetInstructionAsPerformed$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	103	_Instruction.ProgressWithInstructionStep$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	110	_Instruction.InstructionBehavior$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	117	_Instruction.GuideHowTo$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs	126	_Instruction.StopResponding$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoEvents.cs	29	_ManoEvents.Awake$$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoEvents.cs	42	_ManoEvents.Update$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoEvents.cs	108	_ManoEvents.DisplayLogMessage$string$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	84	_ManomotionManager.StopProcessing$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	91	_ManomotionManager.SetResolution$int.int$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	99	_ManomotionManager.SetFrameArray$UnityEngine.Color32$$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	226	_ManomotionManager.Awake$$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	246	_ManomotionManager.HandleAddOnSet$AddOn$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	272	_ManomotionManager.SetManoMotionSettings$ImageFormat.string$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	288	_ManomotionManager.InstantiateSession$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	300	_ManomotionManager.InstantiateHandInfos$$	14	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	344	_ManomotionManager.SetUnityConditions$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	358	_ManomotionManager.HandleManoMotionFrameResized$ManoMotionFrame$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	367	_ManomotionManager.HandleManoMotionFrameInitialized$ManoMotionFrame$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	378	_ManomotionManager.SetResolutionValues$int.int$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	394	_ManomotionManager.InstantiateVisualisationInfo$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	404	_ManomotionManager.HandleNewFrame$ManoMotionFrame$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	432	_ManomotionManager.UpdateTexturesWithNewInfo$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	465	_ManomotionManager.ShouldCalculatePOI$bool$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	481	_ManomotionManager.SetManoMotionSmoothingValue$UnityEngine.UI.Slider$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	490	_ManomotionManager.SetManoMotionGestureSmoothingValue$UnityEngine.UI.Slider$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	499	_ManomotionManager.Update$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	510	_ManomotionManager.HandleOrientationChanged$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	544	_ManomotionManager.CalculateFPSAndProcessingTime$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	560	_ManomotionManager.CalculateProcessingTime$$	23	505
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	582	_ManomotionManager.ProcessFrame$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs	593	_ManomotionManager.Init$string$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	13	_ManomotionUIManagment.Awake$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	26	_ManomotionUIManagment.DisplayInformationAfterManoMotionProcessFrame$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	36	_ManomotionUIManagment.ToggleUIElement$UnityEngine.GameObject$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	44	_ManomotionUIManagment.UpdateFPSText$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	52	_ManomotionUIManagment.UpdateProcessingTime$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	60	_ManomotionUIManagment.ToggleShowLicenseInfo$$	20	661
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs	86	_ManomotionUIManagment.HandleManoMotionManagerInitialized$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs	29	_ManoUtils.Awake$$	0	11
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs	46	_ManoUtils.CalculateNewPosition$UnityEngine.Vector3.float$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs	65	_ManoUtils.AjustBorders$UnityEngine.MeshRenderer.Session$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs	191	_ManoUtils.Start$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs	200	_ManoUtils.Update$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs	229	_ManoUtils.VectorAbs$UnityEngine.Vector3$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	72	_ManoVisualization.InstantiateManomotionMeshes$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	85	_ManoVisualization.CreateBoundingBoxes$$	11	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	103	_ManoVisualization.Start$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	118	_ManoVisualization.SetHandsSupportedByLicence$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	127	_ManoVisualization.DisplayInformationAfterManoMotionProcessFrame$$	34	653
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	178	_ManoVisualization.ShowBackground$UnityEngine.Texture2D.UnityEngine.MeshRenderer$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs	194	_ManoVisualization.ToggleObjectVisibility$UnityEngine.GameObject$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\MenuButton.cs	30	_MenuButton.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\MenuButton.cs	41	_MenuButton.ToggleIconsMenu$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\MenuButton.cs	60	_MenuButton.CloseMenuAndShowManoMotionCanvas$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\MenuButton.cs	71	_MenuButton.CloseMenu$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	32	_ModulatorScript.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	57	_ModulatorScript.Update$$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	101	_ModulatorScript.GetPitch$int$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	133	_ModulatorScript.RoundToMidiMsgRange$int$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	143	_ModulatorScript.GetModPosInCoord$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	157	_ModulatorScript.MoveMod$$	0	81
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	186	_ModulatorScript.OnTriggerEnter$UnityEngine.Collider$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	191	_ModulatorScript.OnTriggerStay$UnityEngine.Collider$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs	216	_ModulatorScript.OnTriggerExit$UnityEngine.Collider$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	12	_PluginWrapper.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	20	_PluginWrapper.GetContext$$	0	2
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	25	_PluginWrapper.SendPlayMsg$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	30	_PluginWrapper.SendNoteOn$int.int.int$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	35	_PluginWrapper.SendNoteOff$int.int$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	41	_PluginWrapper.SendCcMsg$int.int.int$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs	46	_PluginWrapper.RouteAxis$int$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs	29	_ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair.InitializeUsageDisclaimer$$	0	13
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs	51	_ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair.RetrievePrivacyHistory$$	0	9
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs	78	_ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair.NavigateToPrivacyPolicy$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs	87	_ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair.ApprovePrivacyPolicy$$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs	106	_ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair.ClosePrivacyPolicy$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs	114	_ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair.OpenPrivacyPolicy$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ResetEverythingScript.cs	10	_ResetEverythingScript.ResetEverything$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ResetModulatorPositionScript.cs	9	_ResetModulatorPositionScript.ResetModulatorPosition$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	131	_ManoMotion.RunTime.RunTimeApplication.HideApplicationComponents$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	142	_ManoMotion.RunTime.RunTimeApplication.SetMenuIconVisibility$$	0	6
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	159	_ManoMotion.RunTime.RunTimeApplication.ShouldShowBackground$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	172	_ManoMotion.RunTime.RunTimeApplication.ShouldShowBoundingBox$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	185	_ManoMotion.RunTime.RunTimeApplication.ShouldShowCursor$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	198	_ManoMotion.RunTime.RunTimeApplication.ShouldShowPick$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	211	_ManoMotion.RunTime.RunTimeApplication.ShouldShowDrop$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	224	_ManoMotion.RunTime.RunTimeApplication.ShouldShowClick$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	237	_ManoMotion.RunTime.RunTimeApplication.ShouldShowGrab$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	250	_ManoMotion.RunTime.RunTimeApplication.ShouldShowRelease$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	263	_ManoMotion.RunTime.RunTimeApplication.ShouldShowHandSide$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	276	_ManoMotion.RunTime.RunTimeApplication.ShouldShowManoclass$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	289	_ManoMotion.RunTime.RunTimeApplication.ShouldShowContinousGesture$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	302	_ManoMotion.RunTime.RunTimeApplication.ShouldShowWarnings$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	315	_ManoMotion.RunTime.RunTimeApplication.ShouldShowHandStates$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	328	_ManoMotion.RunTime.RunTimeApplication.ShouldShowSmoothingSlider$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	341	_ManoMotion.RunTime.RunTimeApplication.ShouldShowDepth$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	354	_ManoMotion.RunTime.RunTimeApplication.ShouldShowPoi$bool$	0	7
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	367	_ManoMotion.RunTime.RunTimeApplication.ShouldEnableDisplayScripts$bool$	11	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	378	_ManoMotion.RunTime.RunTimeApplication.StartMainApplicationWithDefaultSettings$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	390	_ManoMotion.RunTime.RunTimeApplication.DisableManoMotionGizmos$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	407	_ManoMotion.RunTime.RunTimeApplication.SaveDefalutFeaturesToDisplay$$	124	2936
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	497	_ManoMotion.RunTime.RunTimeApplication.SetManoMotionDefaultFeaturesToDisplay$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	516	_ManoMotion.RunTime.RunTimeApplication.EnableAllTriggers$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	529	_ManoMotion.RunTime.RunTimeApplication.GetDefaultListOfFeatures$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs	548	_ManoMotion.RunTime.RunTimeApplication.DisableAllTriggers$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\SetInitialPostion.cs	9	_SetInitialPostion.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\SpawnPoint.cs	17	_SpawnPoint.InitializeCubePool$$	11	403
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\SpawnPoint.cs	29	_SpawnPoint.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\SpawnPoint.cs	33	_SpawnPoint.Update$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\SpawnPoint.cs	65	_SpawnPoint.GetCubeFromPool$$	15	503
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\StartApplicationInstruction.cs	7	_StartApplicationInstruction.OnEnable$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\StartApplicationInstruction.cs	12	_StartApplicationInstruction.InitializeInstruction$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\StartApplicationInstruction.cs	26	_StartApplicationInstruction.GuideHowTo$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	9	_ToggleGizmos.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	17	_ToggleGizmos.ToggleShowHandStates$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	25	_ToggleGizmos.ToggleShowManoclass$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	33	_ToggleGizmos.ToggleShowPalmCenter$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	42	_ToggleGizmos.ToggleShowPOI$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	51	_ToggleGizmos.ToggleShowHandSide$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	59	_ToggleGizmos.ToggleShowContinuousGestures$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	67	_ToggleGizmos.ToggleShowPickTriggerGesture$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	75	_ToggleGizmos.ToggleShowDropTriggerGesture$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	83	_ToggleGizmos.ToggleShowClickTriggerGesture$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	91	_ToggleGizmos.ToggleShowGrabTriggerGesture$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	99	_ToggleGizmos.ToggleShowReleaseTriggerGesture$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	107	_ToggleGizmos.ToggleShowSmoothingSlider$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	115	_ToggleGizmos.ToggleShowWarnings$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs	123	_ToggleGizmos.ToggleShowDepthEstimation$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ToggleVisualizationValues.cs	9	_ToggleVisualizationValues.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ToggleVisualizationValues.cs	17	_ToggleVisualizationValues.ToggleShowBackgroundLayer$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ToggleVisualizationValues.cs	25	_ToggleVisualizationValues.ToggleBoundingBox$$	0	5
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\TriggerGizmo.cs	15	_TriggerGizmo.OnEnable$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\TriggerGizmo.cs	22	_TriggerGizmo.FixedUpdate$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\TriggerGizmo.cs	27	_TriggerGizmo.FadeAndExpand$$	0	8
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs	44	_ManoMotion.UI.Buttons.UIIconBehavior.OnEnable$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs	53	_ManoMotion.UI.Buttons.UIIconBehavior.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs	62	_ManoMotion.UI.Buttons.UIIconBehavior.UpdateIconAndFrame$bool$	0	27
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs	90	_ManoMotion.UI.Buttons.UIIconBehavior.ToggleActive$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs	96	_ManoMotion.UI.Buttons.UIIconBehavior.SetIsActive$bool$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs	107	_ManoMotion.UI.Buttons.UIIconBehavior.SetIconFunctionality$ManoMotion.UI.Buttons.UIIconBehavior.IconFunctionality$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\UiSwipe.cs	11	_UiSwipe.Start$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\UiSwipe.cs	16	_UiSwipe.Update$$	0	9
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ZoomModelOut.cs	8	_ZoomModelOut.ZoomOut$$	0	3
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ZoomModelsIn.cs	8	_ZoomModelsIn.ZoomIn$$	0	3

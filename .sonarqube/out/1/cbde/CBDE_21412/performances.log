@@ -1,0 +1,866 @@
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs
+Start 6
+Start 0
+Initialize 5
+Initialize 15
+OnTriggerStay 4
+OnTriggerStay 0
+MoveWhenGrab 5
+MoveWhenGrab 0
+RotateWhenHolding 5
+RotateWhenHolding 0
+SpawnWhenClicking 6
+SpawnWhenClicking 0
+OnTriggerEnter 5
+OnTriggerEnter 0
+OnTriggerExit 5
+OnTriggerExit 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\HandCollider.cs
+Start 8
+Start 0
+Update 6
+Update 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\ExampleDetectionCanvas.cs
+Start 5
+Start 0
+HandleShowBoundingBoxValueChanged 5
+HandleShowBoundingBoxValueChanged 15
+HandleStateChanged 5
+HandleStateChanged 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs
+Awake 6
+Awake 0
+GetInputScaleValue 5
+GetInputScaleValue 0
+Start 5
+Start 0
+InitializeInputParameters 6
+InitializeInputParameters 0
+HandleOrientationChanged 5
+HandleOrientationChanged 0
+ResizeFrames 4
+ResizeFrames 0
+ResizeInputRenderTexture 5
+ResizeInputRenderTexture 0
+ResizeCurrentFrameTexture 6
+ResizeCurrentFrameTexture 0
+LateUpdate 5
+LateUpdate 0
+UpdateFrame 4
+UpdateFrame 0
+OnApplicationFocus 5
+OnApplicationFocus 0
+OnApplicationPause 5
+OnApplicationPause 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs
+OnEnable 6
+OnEnable 0
+InitializeInstruction 6
+InitializeInstruction 0
+Update 5
+Update 0
+InstructionBehavior 5
+InstructionBehavior 0
+ProgressWithInstructionStep 6
+ProgressWithInstructionStep 0
+GuideHowTo 6
+GuideHowTo 0
+StopResponding 18
+StopResponding 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs
+OnEnable 5
+OnEnable 0
+PopulateTriggerList 7
+PopulateTriggerList 0
+InitializeInstruction 5
+InitializeInstruction 0
+Update 5
+Update 0
+RepondToUserActions 5
+RepondToUserActions 0
+HandleCorrectUserGestureInput 4
+HandleCorrectUserGestureInput 0
+ProgressWithInstructionStep 5
+ProgressWithInstructionStep 0
+ProceedToNextTriggerAfterTime 5
+ProceedToNextTriggerAfterTime 0
+UpdateTriggerGestureDescription 6
+UpdateTriggerGestureDescription 0
+UpdateRequestedTrigger 5
+UpdateRequestedTrigger 0
+DisableTriggersAfterDelay 5
+DisableTriggersAfterDelay 0
+GuideHowTo 5
+GuideHowTo 0
+StopResponding 6
+StopResponding 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs
+OnEnable 5
+OnEnable 0
+InitializeInstruction 6
+InitializeInstruction 15
+Update 6
+Update 0
+RepondToUserActions 6
+RepondToUserActions 0
+ProgressWithInstructionStep 5
+ProgressWithInstructionStep 0
+UpdateHandSideNeeded 4
+UpdateHandSideNeeded 0
+GuideHowTo 5
+GuideHowTo 0
+StopResponding 5
+StopResponding 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs
+GetAllStepInstructions 7
+GetAllStepInstructions 0
+GetStepInstructions 5
+GetStepInstructions 0
+GetInstructionCanvasText 5
+GetInstructionCanvasText 0
+GetInstructionCardText 5
+GetInstructionCardText 0
+GetInstructionID 18
+GetInstructionID 15
+GetInstructionCardTitle 5
+GetInstructionCardTitle 0
+HasBeenSeen 5
+HasBeenSeen 0
+DeclareInstructionSeen 5
+DeclareInstructionSeen 0
+DeclareInstructionNotSeen 6
+DeclareInstructionNotSeen 0
+SetInstructionAsPerformed 5
+SetInstructionAsPerformed 0
+ProgressWithInstructionStep 4
+ProgressWithInstructionStep 0
+InstructionBehavior 5
+InstructionBehavior 0
+GuideHowTo 6
+GuideHowTo 0
+StopResponding 7
+StopResponding 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\InstructionVisualization.cs
+Start 5
+Start 0
+Update 5
+Update 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Instructions\StartApplicationInstruction.cs
+OnEnable 5
+OnEnable 0
+InitializeInstruction 7
+InitializeInstruction 0
+GuideHowTo 5
+GuideHowTo 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs
+Awake 5
+Awake 0
+Start 5
+Start 0
+HandlePrivacyPolicyAccepted 5
+HandlePrivacyPolicyAccepted 0
+ForceInstructions 7
+ForceInstructions 0
+HandleHowToInstructionsFinished 5
+HandleHowToInstructionsFinished 0
+HandleHowToInstructionsSkipped 5
+HandleHowToInstructionsSkipped 0
+InitializeComponents 5
+InitializeComponents 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs
+ShouldShowCheckMark 5
+ShouldShowCheckMark 0
+HighlightImagesUpToStep 8
+HighlightImagesUpToStep 0
+ShouldDisplayImageSteps 5
+ShouldDisplayImageSteps 0
+ShouldShowAnimationImage 5
+ShouldShowAnimationImage 0
+InitializeAnimator 5
+InitializeAnimator 0
+ShouldShowHandOutlineImage 5
+ShouldShowHandOutlineImage 0
+ShowHowToPick 5
+ShowHowToPick 0
+ShowHowToDrop 6
+ShowHowToDrop 0
+ShowHowToClick 6
+ShowHowToClick 0
+ShowHowToGrab 5
+ShowHowToGrab 0
+ShowHowToRelease 9
+ShowHowToRelease 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs
+Awake 7
+Awake 0
+Update 14
+Update 0
+DisplayFirstTimeInstructions 5
+DisplayFirstTimeInstructions 0
+RetrieveInstructionsHistory 6
+RetrieveInstructionsHistory 0
+InitializeHowtoInstructor 6
+InitializeHowtoInstructor 0
+ProgressWithNextInstruction 14
+ProgressWithNextInstruction 0
+SkipInstructions 8
+SkipInstructions 0
+ConfirmInstructionSeen 8
+ConfirmInstructionSeen 0
+ShouldDisplayCard 7
+ShouldDisplayCard 0
+ShouldDisplayInstructions 7
+ShouldDisplayInstructions 0
+PlaceTextOnCard 10
+PlaceTextOnCard 0
+IllustrateCurrentInstructionOnCanvas 5
+IllustrateCurrentInstructionOnCanvas 0
+UpdateCurrentInstructionStepOnCanvas 7
+UpdateCurrentInstructionStepOnCanvas 0
+HighlightInstructionsBackground 5
+HighlightInstructionsBackground 0
+HandleInstructionsHighlight 6
+HandleInstructionsHighlight 0
+AreAllInstructionFinished 13
+AreAllInstructionFinished 0
+ShowCurrentInstructionOnCanvas 5
+ShowCurrentInstructionOnCanvas 0
+HighlightConfirmation 14
+HighlightConfirmation 0
+DehighlightConfirmation 6
+DehighlightConfirmation 0
+CloseHowToInstructions 6
+CloseHowToInstructions 0
+ShouldShowTriggerAnimationVisuals 5
+ShouldShowTriggerAnimationVisuals 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\InstructionManoVisualization.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs
+InitializeRuntimeComponents 6
+InitializeRuntimeComponents 0
+HideApplicationComponents 6
+HideApplicationComponents 0
+SetMenuIconVisibility 9
+SetMenuIconVisibility 0
+ShouldShowBackground 7
+ShouldShowBackground 0
+ShouldShowBoundingBox 5
+ShouldShowBoundingBox 0
+ShouldShowCursor 5
+ShouldShowCursor 15
+ShouldShowPick 6
+ShouldShowPick 0
+ShouldShowDrop 7
+ShouldShowDrop 0
+ShouldShowClick 6
+ShouldShowClick 0
+ShouldShowGrab 13
+ShouldShowGrab 0
+ShouldShowRelease 7
+ShouldShowRelease 0
+ShouldShowHandSide 7
+ShouldShowHandSide 0
+ShouldShowManoclass 9
+ShouldShowManoclass 0
+ShouldShowContinousGesture 7
+ShouldShowContinousGesture 0
+ShouldShowWarnings 5
+ShouldShowWarnings 0
+ShouldShowHandStates 5
+ShouldShowHandStates 0
+ShouldShowSmoothingSlider 6
+ShouldShowSmoothingSlider 0
+ShouldShowDepth 8
+ShouldShowDepth 0
+ShouldShowPoi 6
+ShouldShowPoi 0
+ShouldEnableDisplayScripts 7
+ShouldEnableDisplayScripts 0
+StartMainApplicationWithDefaultSettings 5
+StartMainApplicationWithDefaultSettings 0
+DisableManoMotionGizmos 5
+DisableManoMotionGizmos 0
+SaveDefalutFeaturesToDisplay 12
+SaveDefalutFeaturesToDisplay 15
+SetManoMotionDefaultFeaturesToDisplay 6
+SetManoMotionDefaultFeaturesToDisplay 0
+EnableAllTriggers 6
+EnableAllTriggers 0
+GetDefaultListOfFeatures 8
+GetDefaultListOfFeatures 0
+DisableAllTriggers 10
+DisableAllTriggers 0
+DisableAllTrigersExcept 9
+DisableAllTrigersExcept 15
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs
+Awake 6
+Awake 0
+Start 6
+Start 15
+AwardPoints 9
+AwardPoints 0
+HandleManoMotionFrameProcessed 7
+HandleManoMotionFrameProcessed 15
+MoveCursorAt 11
+MoveCursorAt 0
+FireAt 9
+FireAt 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\CubeSpawn.cs
+InitializeCubeParts 8
+InitializeCubeParts 0
+AwardPoints 11
+AwardPoints 0
+Randomize 11
+Randomize 0
+DisableAfterTime 6
+DisableAfterTime 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Blocks\Scripts\SpawnPoint.cs
+InitializeCubePool 9
+InitializeCubePool 0
+Start 6
+Start 0
+Update 6
+Update 0
+SpawnCubes 6
+SpawnCubes 0
+GetCubeFromPool 10
+GetCubeFromPool 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Detection\Scripts\ExampleDetectionEdges.cs
+Start 6
+Start 0
+HandleManoMotionFrameUpdated 5
+HandleManoMotionFrameUpdated 0
+HighlightEdgeWarning 4
+HighlightEdgeWarning 0
+FadeOut 5
+FadeOut 0
+FadeIn 5
+FadeIn 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs
+Start 4
+Start 0
+HandleManoMotionFrameUpdated 5
+HandleManoMotionFrameUpdated 0
+MoveAndScaleSpookey 5
+MoveAndScaleSpookey 0
+AssignSpookeyFace 4
+AssignSpookeyFace 0
+HighlightSpookeyImage 8
+HighlightSpookeyImage 0
+FadeOut 6
+FadeOut 0
+FadeIn 6
+FadeIn 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\GestureInfo.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\HandInfo.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\HandInfoUnity.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs
+ResizeCurrentFrameTexture 7
+ResizeCurrentFrameTexture 0
+InitializeInputParameters 5
+InitializeInputParameters 0
+ForceApplicationPermissions 7
+ForceApplicationPermissions 0
+StoragePermisionCheck 10
+StoragePermisionCheck 0
+UpdateFrame 6
+UpdateFrame 0
+UpdateFrame 7
+UpdateFrame 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs
+Awake 6
+Awake 0
+Start 7
+Start 0
+InitializeInputParameters 6
+InitializeInputParameters 0
+InitializeManoMotionFrame 6
+InitializeManoMotionFrame 0
+GetCameraFrameInformation 10
+GetCameraFrameInformation 0
+ResizeManoMotionFrameResolution 11
+ResizeManoMotionFrameResolution 0
+Update 6
+Update 0
+OnEnable 7
+OnEnable 0
+OnDisable 8
+OnDisable 0
+OnApplicationFocus 7
+OnApplicationFocus 0
+OnApplicationPause 5
+OnApplicationPause 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManoLicense.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManoMotionFrame.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManoSettings.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionBase.cs
+Init 7
+Init 0
+SetResolutionValues 5
+SetResolutionValues 0
+SetUnityConditions 5
+SetUnityConditions 0
+CalculateFPSAndProcessingTime 6
+CalculateFPSAndProcessingTime 0
+ProcessManomotion 8
+ProcessManomotion 0
+UpdateTexturesWithNewInfo 8
+UpdateTexturesWithNewInfo 0
+InstantiateSession 7
+InstantiateSession 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs
+processFrame 4
+processFrame 0
+setFrameArray 4
+setFrameArray 0
+setResolution 5
+setResolution 0
+stop 5
+stop 0
+init 6
+init 0
+StopProcessing 9
+StopProcessing 0
+SetResolution 8
+SetResolution 0
+SetFrameArray 9
+SetFrameArray 0
+Awake 9
+Awake 0
+HandleAddOnSet 5
+HandleAddOnSet 0
+Start 7
+Start 0
+SetManoMotionSettings 7
+SetManoMotionSettings 0
+InstantiateSession 7
+InstantiateSession 0
+InstantiateHandInfos 11
+InstantiateHandInfos 0
+InitiateLibrary 7
+InitiateLibrary 0
+SetUnityConditions 6
+SetUnityConditions 15
+HandleManoMotionFrameResized 6
+HandleManoMotionFrameResized 0
+HandleManoMotionFrameInitialized 11
+HandleManoMotionFrameInitialized 0
+SetResolutionValues 13
+SetResolutionValues 15
+InstantiateVisualisationInfo 5
+InstantiateVisualisationInfo 0
+HandleNewFrame 5
+HandleNewFrame 0
+GetCameraFramePixelColors 6
+GetCameraFramePixelColors 0
+UpdateTexturesWithNewInfo 7
+UpdateTexturesWithNewInfo 0
+ShouldCalculatePOI 5
+ShouldCalculatePOI 0
+SetManoMotionSmoothingValue 7
+SetManoMotionSmoothingValue 0
+SetManoMotionGestureSmoothingValue 5
+SetManoMotionGestureSmoothingValue 0
+Update 5
+Update 0
+HandleOrientationChanged 7
+HandleOrientationChanged 0
+ProcessManomotion 5
+ProcessManomotion 0
+CalculateFPSAndProcessingTime 5
+CalculateFPSAndProcessingTime 0
+CalculateProcessingTime 10
+CalculateProcessingTime 0
+ProcessFrame 4
+ProcessFrame 0
+Init 5
+Init 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\Session.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\TrackingInfo.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Data Structure\VisualizationInfo.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs
+Start 5
+Start 0
+Initialize 7
+Initialize 0
+DisplayInformationAfterManoMotionProcessFrame 6
+DisplayInformationAfterManoMotionProcessFrame 0
+DisplayDepthEstimation 6
+DisplayDepthEstimation 0
+DisplayCurrentsmoothingValue 7
+DisplayCurrentsmoothingValue 0
+DisplayCurrentGestureSmoothingValue 5
+DisplayCurrentGestureSmoothingValue 0
+DisplayPalmCenter 6
+DisplayPalmCenter 0
+DisplayPOI 6
+DisplayPOI 0
+DisplayManoclass 4
+DisplayManoclass 0
+DisplayContinuousGestures 4
+DisplayContinuousGestures 0
+DisplayHandSide 4
+DisplayHandSide 0
+DisplayHandState 5
+DisplayHandState 0
+DisplayTriggerGesture 7
+DisplayTriggerGesture 15
+InitializeTriggerPool 7
+InitializeTriggerPool 0
+GetCurrentPooledTrigger 8
+GetCurrentPooledTrigger 0
+TriggerDisplay 6
+TriggerDisplay 0
+HighlightStatesToStateDetection 6
+HighlightStatesToStateDetection 0
+DisplayApproachingToEdgeFlags 6
+DisplayApproachingToEdgeFlags 0
+ShouldDisplaySmoothingSlider 5
+ShouldDisplaySmoothingSlider 0
+DisplaySmoothingSlider 4
+DisplaySmoothingSlider 0
+SetGestureDescriptionParts 5
+SetGestureDescriptionParts 0
+InitializeFlagParts 4
+InitializeFlagParts 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Gizmos\TriggerGizmo.cs
+OnEnable 5
+OnEnable 15
+FixedUpdate 6
+FixedUpdate 0
+FadeAndExpand 12
+FadeAndExpand 15
+InitializeTriggerGizmo 7
+InitializeTriggerGizmo 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\Category.cs
+Awake 11
+Awake 0
+Start 5
+Start 0
+InitializeUIValues 6
+InitializeUIValues 0
+CalculateDimensions 7
+CalculateDimensions 0
+Calculate 5
+Calculate 0
+AlignIcons 6
+AlignIcons 0
+InitializeIconBehaviors 7
+InitializeIconBehaviors 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs
+Awake 6
+Awake 0
+Start 5
+Start 0
+SetupMenu 12
+SetupMenu 0
+PositionCategories 5
+PositionCategories 0
+PositionCategoriesAfter 5
+PositionCategoriesAfter 0
+GetAllIconBehaviors 8
+GetAllIconBehaviors 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\IconMainMenu.cs
+Start 10
+Start 0
+Update 7
+Update 0
+CheckForScreenOrientationChange 11
+CheckForScreenOrientationChange 0
+OnEnable 9
+OnEnable 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs
+Awake 9
+Awake 15
+DisplayInformationAfterManoMotionProcessFrame 7
+DisplayInformationAfterManoMotionProcessFrame 0
+ToggleUIElement 6
+ToggleUIElement 0
+UpdateFPSText 29
+UpdateFPSText 0
+UpdateProcessingTime 6
+UpdateProcessingTime 0
+ToggleShowLicenseInfo 13
+ToggleShowLicenseInfo 15
+HandleManoMotionManagerInitialized 9
+HandleManoMotionManagerInitialized 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\MenuButton.cs
+Start 6
+Start 0
+ToggleIconsMenu 10
+ToggleIconsMenu 0
+CloseMenuAndShowManoMotionCanvas 7
+CloseMenuAndShowManoMotionCanvas 0
+CloseMenu 12
+CloseMenu 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs
+InitializeUsageDisclaimer 9
+InitializeUsageDisclaimer 0
+RetrievePrivacyHistory 11
+RetrievePrivacyHistory 0
+NavigateToPrivacyPolicy 7
+NavigateToPrivacyPolicy 0
+ApprovePrivacyPolicy 13
+ApprovePrivacyPolicy 0
+ClosePrivacyPolicy 11
+ClosePrivacyPolicy 0
+OpenPrivacyPolicy 11
+OpenPrivacyPolicy 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs
+Start 11
+Start 0
+ToggleShowHandStates 11
+ToggleShowHandStates 0
+ToggleShowManoclass 6
+ToggleShowManoclass 0
+ToggleShowPalmCenter 7
+ToggleShowPalmCenter 0
+ToggleShowPOI 10
+ToggleShowPOI 15
+ToggleShowHandSide 8
+ToggleShowHandSide 0
+ToggleShowContinuousGestures 5
+ToggleShowContinuousGestures 15
+ToggleShowPickTriggerGesture 5
+ToggleShowPickTriggerGesture 0
+ToggleShowDropTriggerGesture 5
+ToggleShowDropTriggerGesture 0
+ToggleShowClickTriggerGesture 5
+ToggleShowClickTriggerGesture 0
+ToggleShowGrabTriggerGesture 9
+ToggleShowGrabTriggerGesture 0
+ToggleShowReleaseTriggerGesture 5
+ToggleShowReleaseTriggerGesture 0
+ToggleShowSmoothingSlider 5
+ToggleShowSmoothingSlider 0
+ToggleShowWarnings 5
+ToggleShowWarnings 0
+ToggleShowDepthEstimation 4
+ToggleShowDepthEstimation 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs
+OnEnable 5
+OnEnable 0
+Start 4
+Start 0
+UpdateIconAndFrame 5
+UpdateIconAndFrame 15
+ToggleActive 4
+ToggleActive 0
+SetIsActive 4
+SetIsActive 0
+SetIconFunctionality 4
+SetIconFunctionality 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\BoundingBox.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\BoundingBoxUI.cs
+Start 4
+Start 0
+UpdateInfo 12
+UpdateInfo 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs
+InstantiateManomotionMeshes 7
+InstantiateManomotionMeshes 15
+CreateBoundingBoxes 8
+CreateBoundingBoxes 0
+Start 5
+Start 0
+SetHandsSupportedByLicence 6
+SetHandsSupportedByLicence 0
+DisplayInformationAfterManoMotionProcessFrame 7
+DisplayInformationAfterManoMotionProcessFrame 0
+ShowBoundingBoxInfo 7
+ShowBoundingBoxInfo 0
+ShowBackground 7
+ShowBackground 0
+ToggleObjectVisibility 5
+ToggleObjectVisibility 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\ManoVisualization\ToggleVisualizationValues.cs
+Start 7
+Start 0
+ToggleShowBackgroundLayer 6
+ToggleShowBackgroundLayer 0
+ToggleBoundingBox 6
+ToggleBoundingBox 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoEvents.cs
+Awake 7
+Awake 0
+Update 7
+Update 0
+HandleManomotionMessages 6
+HandleManomotionMessages 0
+DisplayLogMessage 6
+DisplayLogMessage 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs
+Awake 4
+Awake 0
+CalculateNewPosition 6
+CalculateNewPosition 0
+AjustBorders 5
+AjustBorders 0
+CalculateRatio 4
+CalculateRatio 0
+CalculateSize 4
+CalculateSize 0
+AdjustMeshScale 4
+AdjustMeshScale 0
+CalculateCorrectionPoint 4
+CalculateCorrectionPoint 0
+Start 5
+Start 0
+Update 4
+Update 0
+CheckForScreenOrientationChange 4
+CheckForScreenOrientationChange 0
+VectorAbs 5
+VectorAbs 15
+OrientMeshRenderer 4
+OrientMeshRenderer 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\BWEffect.cs
+Awake 4
+Awake 0
+OnRenderImage 7
+OnRenderImage 15
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\GrabPass.cs
+Awake 5
+Awake 0
+Update 5
+Update 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Manomotion\UIBlurEffect\Scripts\Grayscale.cs
+Awake 4
+Awake 0
+OnRenderImage 5
+OnRenderImage 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Midi\PluginWrapper.cs
+Start 6
+Start 0
+GetContext 5
+GetContext 0
+SendPlayMsg 5
+SendPlayMsg 0
+SendNoteOn 5
+SendNoteOn 0
+SendNoteOff 6
+SendNoteOff 0
+SendCcMsg 6
+SendCcMsg 15
+RouteAxis 5
+RouteAxis 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\ArState.cs
+Start 4
+Start 0
+CheckForTrackingState 4
+CheckForTrackingState 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\FollowHand.cs
+Start 4
+Start 0
+Update 4
+Update 0
+TrackMovement 4
+TrackMovement 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\HandTrackingInfo.cs
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\ModulatorScript.cs
+Start 7
+Start 0
+Update 5
+Update 0
+SendMidiMessage 4
+SendMidiMessage 0
+GetPitch 5
+GetPitch 0
+GetMsgType 4
+GetMsgType 0
+GetChannel 4
+GetChannel 0
+RoundToMidiMsgRange 5
+RoundToMidiMsgRange 0
+GetModPosInCoord 5
+GetModPosInCoord 0
+MoveMod 6
+MoveMod 0
+OnTriggerEnter 4
+OnTriggerEnter 0
+OnTriggerStay 4
+OnTriggerStay 0
+OnTriggerExit 5
+OnTriggerExit 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Models\SetInitialPostion.cs
+Start 6
+Start 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ResetEverythingScript.cs
+ResetEverything 6
+ResetEverything 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ResetModulatorPositionScript.cs
+ResetModulatorPosition 5
+ResetModulatorPosition 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\UiSwipe.cs
+Start 4
+Start 0
+Update 4
+Update 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ZoomModelOut.cs
+ZoomOut 5
+ZoomOut 0
+
+C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assets\Scripts\Ui\ZoomModelsIn.cs
+ZoomIn 5
+ZoomIn 0
+

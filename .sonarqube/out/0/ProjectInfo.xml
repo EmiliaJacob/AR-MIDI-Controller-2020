@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>Assembly-CSharp-firstpass</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>ef25f105-bac8-6330-04ab-4722d308095c</ProjectGuid>
+  <FullPath>C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Assembly-CSharp-firstpass.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\.sonarqube\out\0\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePath">C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Temp\bin\Debug\Assembly-CSharp-firstpass.dll.RoslynCA.json|C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\Temp\bin\Debug\Assembly-CSharp-firstpass.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPath">C:\Hochschule\Projektarbeit\Unity\GitHubArMidiController\ArMidiController\.sonarqube\out\0</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+</ProjectInfo>
