@@ -8,10 +8,11 @@ public class ModulatorScript : MonoBehaviour
     private float _xStepLenghtUnity;
     private float _yStepLenghtUnity;
     private float _zStepLenghtUnity;
-    private Mesh _meshCoordinates;
+    private Mesh _meshOfCoordObj;
     private Renderer _rendererCoordinates;
     private int[] _lastPitch;
     private int[] _lastChannel;
+    public bool DebugMode = false;
 
 
     private const int DEFAULT_VELOCITY = 120;
@@ -29,18 +30,18 @@ public class ModulatorScript : MonoBehaviour
     public Dropdown YChannel;
     public Dropdown ZChannel;
 
-
     void Start()
     {
         _rendererCoordinates = CoordObj.GetComponent<Renderer>();
-        _meshCoordinates = CoordObj.GetComponent<MeshFilter>().mesh;
+        _meshOfCoordObj = CoordObj.GetComponent<MeshFilter>().mesh;
 
-        Vector3 startPosModInLocal = _meshCoordinates.bounds.min + new Vector3(
-            _meshCoordinates.bounds.size.x, 0, 0);
+        Vector3 startPosModInLocal = _meshOfCoordObj.bounds.min + new Vector3(
+            _meshOfCoordObj.bounds.size.x, 0, 0);
         Vector3 startPosModInWorld = CoordObj.transform.TransformPoint(startPosModInLocal);
         transform.position = startPosModInWorld;
         NullPosModInWorld = startPosModInWorld;
-        UiPosMod.text = $"x: {startPosModInLocal.x}, y: {startPosModInLocal.y}, z: {startPosModInLocal.z}";
+        _modPosInCoord = new Vector3Int(0, 0, 0);
+        UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
 
         Vector3 axisLenghtUnity = CoordObj.GetComponent<MeshFilter>().mesh.bounds.size;
         _xStepLenghtUnity = 128 / axisLenghtUnity.x;
@@ -63,12 +64,23 @@ public class ModulatorScript : MonoBehaviour
             {
                MoveMod();
                _modPosInCoord = GetModPosInCoord();
-               //UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
+               UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
                SendMidiMessage(0, _modPosInCoord.x);
                SendMidiMessage(1, _modPosInCoord.y);
                SendMidiMessage(2, _modPosInCoord.z);
             }
         }
+    }
+
+    public void SetModulatorToNull()
+    {
+        //var meshOfCoordObj = CoordinateObject.GetComponent<MeshFilter>().mesh;
+        var newModPosInWorld = CoordObj.transform.TransformPoint(
+            _meshOfCoordObj.bounds.min + new Vector3(
+            _meshOfCoordObj.bounds.size.x, 0, 0));
+        NullPosModInWorld = newModPosInWorld;
+        transform.position = newModPosInWorld;
+        UiPosMod.text = "x: 0, y: 0, z: 0"; // TODO: HardCode Entfernen 
     }
 
     private static int _octave = 3;
@@ -186,6 +198,7 @@ public class ModulatorScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider) 
     {
+        collider.gameObject.transform.position = transform.position;
         GetComponent<Renderer>().material.color = new Color(0, 255, 0);
     }
 
@@ -199,19 +212,20 @@ public class ModulatorScript : MonoBehaviour
           }
       }
 
-        //* DEBUG SECTION
-
-       //if(collider.gameObject.tag == "Debug")
-       //{
-       //
-       //    transform.position = collider.gameObject.transform.position;
-       //
-       //    _modPosInCoord = GetModPosInCoord();
-       //    //UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
-       //    SendMidiMessage(0, _modPosInCoord.x);
-       //    SendMidiMessage(1, _modPosInCoord.y);
-       //    SendMidiMessage(2, _modPosInCoord.z);
-       //}
+      if(DebugMode)
+        {
+            transform.position = collider.gameObject.transform.position;
+            if (!_rendererCoordinates.bounds.Contains(transform.position)) 
+            {
+                var closestPointInBox = _rendererCoordinates.bounds.ClosestPoint(transform.position);
+                transform.position = closestPointInBox;
+            }
+           _modPosInCoord = GetModPosInCoord();
+           UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
+           SendMidiMessage(0, _modPosInCoord.x);
+           SendMidiMessage(1, _modPosInCoord.y);
+           SendMidiMessage(2, _modPosInCoord.z);
+       }
     }
 
     private void OnTriggerExit(Collider collider)

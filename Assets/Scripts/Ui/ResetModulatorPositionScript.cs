@@ -3,11 +3,11 @@ using UnityEngine.UI;
 
 public class ResetModulatorPositionScript : MonoBehaviour
 {
-    public GameObject ModObj;
-    public GameObject CoordinateObject;
-    public Text UiPosMod;
+    public ModulatorScript ModScript;
+    //public GameObject CoordinateObject;
+    //public Text UiPosMod;
 
-    public void ResetModulatorPosition()
+   /* public void ResetModulatorPosition()
     {
         var meshOfCoordObj = CoordinateObject.GetComponent<MeshFilter>().mesh;
         var newModPosInWorld = CoordinateObject.transform.TransformPoint(
@@ -16,5 +16,9 @@ public class ResetModulatorPositionScript : MonoBehaviour
         ModObj.GetComponent<ModulatorScript>().NullPosModInWorld = newModPosInWorld;
         ModObj.transform.position = newModPosInWorld;
         UiPosMod.text = "x: 0, y: 0, z: 0";
+    }*/
+   public void ResetModulatorToNull()
+    {
+        ModScript.SetModulatorToNull();
     }
 }
