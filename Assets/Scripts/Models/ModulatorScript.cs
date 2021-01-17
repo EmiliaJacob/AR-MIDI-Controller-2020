@@ -4,18 +4,21 @@ using UnityEngine.UI;
 public class ModulatorScript : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
-    private Vector3Int _modPosInCoord;
+    //private Vector3Int _modPosInCoord;
     private float _xStepLenghtUnity;
     private float _yStepLenghtUnity;
     private float _zStepLenghtUnity;
     private Mesh _meshOfCoordObj;
-    private Renderer _rendererCoordinates;
+    private Renderer _rendererCoordObj;
     private int[] _lastPitch;
     private int[] _lastChannel;
-    public bool DebugMode = false;
+    public static bool DebugMode = false;
 
 
     private const int DEFAULT_VELOCITY = 120;
+    private const int X = 0;
+    private const int Y = 1;
+    private const int Z = 2;
     public Vector3 NullPosModInWorld; 
     public Text UiPosMod;
     public GameObject CoordObj;
@@ -30,30 +33,19 @@ public class ModulatorScript : MonoBehaviour
     public Dropdown YChannel;
     public Dropdown ZChannel;
 
+    
     void Start()
     {
-        _rendererCoordinates = CoordObj.GetComponent<Renderer>();
+        _rendererCoordObj = CoordObj.GetComponent<Renderer>();
         _meshOfCoordObj = CoordObj.GetComponent<MeshFilter>().mesh;
-
-        Vector3 startPosModInLocal = _meshOfCoordObj.bounds.min + new Vector3(
-            _meshOfCoordObj.bounds.size.x, 0, 0);
-        Vector3 startPosModInWorld = CoordObj.transform.TransformPoint(startPosModInLocal);
-        transform.position = startPosModInWorld;
-        NullPosModInWorld = startPosModInWorld;
-        _modPosInCoord = new Vector3Int(0, 0, 0);
-        UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
-
         Vector3 axisLenghtUnity = CoordObj.GetComponent<MeshFilter>().mesh.bounds.size;
         _xStepLenghtUnity = 128 / axisLenghtUnity.x;
         _yStepLenghtUnity = 128 / axisLenghtUnity.y;
         _zStepLenghtUnity = 128 / axisLenghtUnity.z;
-
-        _lastPitch = new int[] {0, 0, 0};
-
+        _lastPitch = new int[] { -1, -1, -1 };
         _lastChannel = new int[] {int.Parse(XChannel.captionText.text),
                                   int.Parse(YChannel.captionText.text),
                                   int.Parse(ZChannel.captionText.text)};
-
     }
 
     void Update()
@@ -62,48 +54,70 @@ public class ModulatorScript : MonoBehaviour
         {
             if (_modulatorMovementActive)
             {
-               MoveMod();
-               _modPosInCoord = GetModPosInCoord();
+               var _modPosInCoord = GetModPosInCoord();
                UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
-               SendMidiMessage(0, _modPosInCoord.x);
-               SendMidiMessage(1, _modPosInCoord.y);
-               SendMidiMessage(2, _modPosInCoord.z);
+               SendMidiMessage(X, _modPosInCoord.x);
+               SendMidiMessage(Y, _modPosInCoord.y);
+               SendMidiMessage(Z, _modPosInCoord.z);
+               _modulatorMovementActive = MoveMod();
+            }
+            else
+            {
+
             }
         }
     }
 
     public void SetModulatorToNull()
     {
-        //var meshOfCoordObj = CoordinateObject.GetComponent<MeshFilter>().mesh;
         var newModPosInWorld = CoordObj.transform.TransformPoint(
             _meshOfCoordObj.bounds.min + new Vector3(
             _meshOfCoordObj.bounds.size.x, 0, 0));
+       //Debug.Log($"newModPosInWorld= {newModPosInWorld}");
+       //Debug.Log($"CoordObjPos= {CoordObj.transform.position}");
+       //Debug.Log($"Bounds= {_meshOfCoordObj.bounds.min}");
         NullPosModInWorld = newModPosInWorld;
         transform.position = newModPosInWorld;
-        UiPosMod.text = "x: 0, y: 0, z: 0"; // TODO: HardCode Entfernen 
+        var newPosInCoord = GetModPosInCoord();
+        UiPosMod.text = $"x: {newPosInCoord.x}, y: {newPosInCoord.y}, z: {newPosInCoord.z}"; 
     }
 
-    private static int _octave = 3;
+    private Vector3Int GetModPosInCoord() //PRIVATE
+    {
+        Vector3 deltaToNullLocal = CoordObj.transform.InverseTransformPoint(transform.position) -
+            CoordObj.transform.InverseTransformPoint(NullPosModInWorld);
+        float xPositionInCoord = (deltaToNullLocal.x * _xStepLenghtUnity);
+        float yPositionInCoord = (deltaToNullLocal.y * _yStepLenghtUnity);
+        float zPositionInCoord = (deltaToNullLocal.z * _zStepLenghtUnity);
+        return new Vector3Int(
+            RoundToMidiMsgRange(-1 * (int)xPositionInCoord),
+            RoundToMidiMsgRange((int)yPositionInCoord),
+            RoundToMidiMsgRange((int)zPositionInCoord)
+            );
+    }
 
-    private void SendMidiMessage(int axis, int posOnAxisInCoord)
+
+    private static int _octave = 6;
+
+    private void SendMidiMessage(int axis, int posOnAxisInCoord) 
     {
         switch (GetMsgType(axis))
         {
             case "Note":
-                if (GetPitch(posOnAxisInCoord) != _lastPitch[axis]) //TODO: implement running status
+                if (_modulatorMovementActive)
                 {
-                    PluginWrapper.SendNoteOff(_lastPitch[axis],  _lastChannel[axis]);
-                    Debug.Log($"{axis} Off || pitch: {_lastPitch[axis]} || channel: {_lastChannel[axis]}");
-                    int pitch = GetPitch(posOnAxisInCoord);
-                    PluginWrapper.SendNoteOn(pitch, DEFAULT_VELOCITY, GetChannel(axis) - 1);
-                    Debug.Log($"{axis} On || pitch: {pitch} || channel: {GetChannel(axis)}");
-                    _lastPitch[axis] = pitch; 
-                    _lastChannel[axis] = GetChannel(axis);
+                    if (GetPitch(posOnAxisInCoord) != _lastPitch[axis]) //TODO: implement running status
+                    {
+                        PluginWrapper.SendNoteOff(axis,_lastPitch[axis], _lastChannel[axis]);
+                        int pitch = GetPitch(posOnAxisInCoord);
+                        PluginWrapper.SendNoteOn(axis, pitch, DEFAULT_VELOCITY, GetChannel(axis));
+                       _lastPitch[axis] = pitch;
+                        _lastChannel[axis] = GetChannel(axis);
+                    }
                 }
                 return;
             case "Cc":
-                //UiPosMod.text = "wee";
-                PluginWrapper.SendCcMsg(posOnAxisInCoord, axis, GetChannel(axis) - 1);
+                PluginWrapper.SendCcMsg(posOnAxisInCoord, axis, GetChannel(axis));
                 return;
             default:
                 Debug.Log($"Wrong MessageType On {axis}");
@@ -111,13 +125,15 @@ public class ModulatorScript : MonoBehaviour
         }
     }
 
-    private int GetPitch(int posOnAxisInCoord) // TODO: Oktave beschränken auf MIDI Protokoll
+    public int GetPitch(int posOnAxisInCoord) // TODO: Oktave beschränken auf MIDI Protokoll //PRIVATE
     {
         float steplenght = 128 / 12;
-        return ((int)(posOnAxisInCoord / steplenght));
+        int pitch = (int)(posOnAxisInCoord / steplenght);
+        int pitchAndOctave = pitch + (_octave * 12);
+        return (pitchAndOctave);
     }
 
-    private string GetMsgType(int axis)
+    private string GetMsgType(int axis) //PRIVATE
     {
         switch(axis)
         {
@@ -130,20 +146,20 @@ public class ModulatorScript : MonoBehaviour
         }
     }
 
-    private int GetChannel(int axis)
+    public int GetChannel(int axis) //PRIVATE
     {
         switch(axis)
         {
             case 0:
-                return int.Parse(XChannel.captionText.text);
+                return int.Parse(XChannel.captionText.text) - 1;
             case 1:
-                return int.Parse(YChannel.captionText.text);
+                return int.Parse(YChannel.captionText.text) - 1;
             default:
-                return int.Parse(ZChannel.captionText.text);
+                return int.Parse(ZChannel.captionText.text) - 1;
         }
     }
 
-    private int RoundToMidiMsgRange(int input)
+    private int RoundToMidiMsgRange(int input) //PRIVATE
     {
         if (input > 127)
             return 127;
@@ -153,21 +169,7 @@ public class ModulatorScript : MonoBehaviour
             return input;
     }
 
-    private Vector3Int GetModPosInCoord()
-    {
-        Vector3 deltaInUnity = CoordObj.transform.InverseTransformPoint(transform.position) - 
-            CoordObj.transform.InverseTransformPoint(NullPosModInWorld);
-        float xPositionInCoord = (deltaInUnity.x * _xStepLenghtUnity);
-        float yPositionInCoord = (deltaInUnity.y * _yStepLenghtUnity);
-        float zPositionInCoord = (deltaInUnity.z * _zStepLenghtUnity);
-        return new Vector3Int(
-            RoundToMidiMsgRange(-1 * (int)xPositionInCoord),
-            RoundToMidiMsgRange((int)yPositionInCoord),
-            RoundToMidiMsgRange((int)zPositionInCoord)
-            );
-    } 
-
-    private void MoveMod()
+    private bool MoveMod()
     {
         if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
         {
@@ -176,11 +178,13 @@ public class ModulatorScript : MonoBehaviour
 
             transform.position = calculatedPos;
 
-            if (!_rendererCoordinates.bounds.Contains(transform.position))
+            if (!_rendererCoordObj.bounds.Contains(transform.position))
             {
-                var closestPointInBox = _rendererCoordinates.bounds.ClosestPoint(transform.position);
+                var closestPointInBox = _rendererCoordObj.bounds.ClosestPoint(transform.position);
                 transform.position = closestPointInBox;
             }
+
+            return true;
         }
         else
         {
@@ -188,11 +192,10 @@ public class ModulatorScript : MonoBehaviour
             {
                 if (GetMsgType(i) == "Note")
                 {
-                    PluginWrapper.SendNoteOff(_lastPitch[i], _lastChannel[i]);
+                    PluginWrapper.SendNoteOff(i, _lastPitch[i], _lastChannel[i]);
                 }
             }
-
-            _modulatorMovementActive = false;
+            return false;
         }
     }
 
@@ -215,21 +218,62 @@ public class ModulatorScript : MonoBehaviour
       if(DebugMode)
         {
             transform.position = collider.gameObject.transform.position;
-            if (!_rendererCoordinates.bounds.Contains(transform.position)) 
+            if (!_rendererCoordObj.bounds.Contains(transform.position)) 
             {
-                var closestPointInBox = _rendererCoordinates.bounds.ClosestPoint(transform.position);
+                var closestPointInBox = _rendererCoordObj.bounds.ClosestPoint(transform.position);
                 transform.position = closestPointInBox;
             }
-           _modPosInCoord = GetModPosInCoord();
+           var _modPosInCoord = GetModPosInCoord();
            UiPosMod.text = $"x: {_modPosInCoord.x}, y: {_modPosInCoord.y}, z: {_modPosInCoord.z}";
-           SendMidiMessage(0, _modPosInCoord.x);
-           SendMidiMessage(1, _modPosInCoord.y);
-           SendMidiMessage(2, _modPosInCoord.z);
+            SendMidiDebugMessage(X, _modPosInCoord.x);
+            SendMidiDebugMessage(Y, _modPosInCoord.y);
+            SendMidiDebugMessage(Z, _modPosInCoord.z);
        }
+    }
+    private static int MidiDebugCounter = 0;
+    private void SendMidiDebugMessage(int axis, int posOnAxisInCoord)
+    {
+        switch (GetMsgType(axis))
+        {
+            case "Note":
+                if (GetPitch(posOnAxisInCoord) != _lastPitch[axis]) //TODO: implement running status
+                {
+                    //PluginWrapper.SendNoteOff(_lastPitch[axis], _lastChannel[axis]);
+                    Debug.Log($"{axis} Off || pitch: {_lastPitch[axis]} || channel: {_lastChannel[axis]}");
+                    int pitch = GetPitch(posOnAxisInCoord);
+                    //PluginWrapper.SendNoteOn(pitch, DEFAULT_VELOCITY, GetChannel(axis) - 1);
+                    Debug.Log($"{axis} On || pitch: {pitch} || channel: {GetChannel(axis)}");
+                    _lastPitch[axis] = pitch;
+                    _lastChannel[axis] = GetChannel(axis);
+                }
+                return;
+            case "Cc":
+                //UiPosMod.text = "wee";
+                Debug.Log($"CC Message: Value = {posOnAxisInCoord} | Axis = {axis} | Channel = {GetChannel(axis)}");
+                //PluginWrapper.SendCcMsg(posOnAxisInCoord, axis, GetChannel(axis) - 1);
+                return;
+            default:
+                Debug.Log($"Wrong MessageType On {axis}");
+                return;
+        }
     }
 
     private void OnTriggerExit(Collider collider)
     {
        GetComponent<Renderer>().material.color = new Color(255, 0, 0);
+        if(DebugMode)
+        {
+                        for (int i = 0; i < 3; i++)
+            {
+                if (GetMsgType(i) == "Note")
+                {
+                   // PluginWrapper.SendNoteOff(_lastPitch[i], _lastChannel[i]);
+                    Debug.Log($"{i} Off || pitch: {_lastPitch[i]} || channel: {_lastChannel[i]}");
+
+                }
+            }
+
+        }
+
     }
 }

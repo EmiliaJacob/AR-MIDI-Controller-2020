@@ -169,6 +169,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.manomotion.arfoundationssdkceexample
+    Standalone: com.manomotion.arfoundationssdkceexample
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 26

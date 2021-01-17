@@ -17,9 +17,9 @@ public class ResetEverythingScript : MonoBehaviour
         ModulatorAndCoordinates.transform.LookAt(lookTarget);
 
         var meshOfCoordObj = Coordinates.GetComponent<MeshFilter>().mesh;
-        var newModPosInWorld = Coordinates.transform.TransformPoint(
+        var newNullPosMod = Coordinates.transform.TransformPoint(
             meshOfCoordObj.bounds.min + new Vector3(
             meshOfCoordObj.bounds.size.x, 0, 0));
-        Modulator.GetComponent<ModulatorScript>().NullPosModInWorld = newModPosInWorld;
+        Modulator.GetComponent<ModulatorScript>().NullPosModInWorld = newNullPosMod;
     }
 }
