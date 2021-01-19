@@ -1,9 +1,9 @@
 package com.example.midiplugin;
 
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.media.midi.MidiDevice;
 import android.media.midi.MidiDeviceInfo;
-import android.media.midi.MidiDeviceStatus;
 import android.media.midi.MidiInputPort;
 import android.media.midi.MidiManager;
 import android.util.Log;
@@ -13,128 +13,87 @@ import java.io.IOException;
 
 public class MidiPlugin
 {
-    private int chosenReceiver = 0; 
-    private MidiManager mManager;
-    private MidiDeviceInfo[] mInfos;
-    private String[] receivingDevices;
-    private MidiDevice mDevice;
-    private MidiInputPort mInputPort;
+    private Context _unityContext;
+    private MidiManager _mManager;
+    private MidiDevice _mDevice;
+    private MidiInputPort _mInputPort;
 
-    public void midiSetup(Context context) 
+    public boolean CheckForMidiSupport(Context unityContext)
     {
-        mManager = (MidiManager) context.getSystemService(Context.MIDI_SERVICE);
-        mInfos = mManager.getDevices(); 
-        establishConnection();
-        Toast toastInputPort = Toast.makeText(context, "Setup finished", Toast.LENGTH_SHORT);
-        toastInputPort.show();
-
-    }
-
-    public void sendMidi(byte[] msg, int numBytes, long timestamp, Context context) //TODO: refactoren und abändern
-    {
-       if (mInputPort != null) 
-       {
-           try 
-           {
-               mInputPort.send(msg, 0, numBytes, timestamp);
-           } 
-           catch (IOException e) 
-           {
-               Toast.makeText(context, "Msg couldnt be sent",Toast.LENGTH_LONG).show();
-           }
-       } 
-       else 
-       {
-           Toast.makeText(context, "Not connected",Toast.LENGTH_LONG).show();
-       }
-    }
-
-    public void sendNoteOn(int pitch, int velocity, int channel, Context context)
-    {
-        int numBytes = 3;
-        byte[] msg = new byte[numBytes];
-        msg[0] = (byte) (0x90 + channel); 
-        msg[1] = (byte) (pitch); 
-        msg[2] = (byte) (0x78); 
-        long now = System.nanoTime();
-        sendMidi(msg, numBytes, now, context);
-    }
-
-    public void sendNoteOff(int pitch, int channel, Context context)
-    {
-        int numBytes = 3;
-        byte[] msg = new byte[numBytes];
-        msg[0] = (byte) (0x80 + channel); 
-        msg[1] = (byte) (pitch); 
-        msg[2] = (byte) (0x00); 
-        long now = System.nanoTime();
-        sendMidi(msg, numBytes, now, context);
-
-    }
-
-    public void sendCcMsg(int value, int controllerNr, int channel, Context context) //TODO Refactoren und abändern!!!
-    {
-        int numBytes = 3;
-        byte[] msg = new byte[numBytes];
-        msg[0] = (byte) (0xB0 + channel); // CC on Channel 0 
-        msg[1] = (byte) (/*0x00*/ controllerNr); // Controller #0
-        msg[2] = (byte) (value); // value
-        long now = System.nanoTime();
-        sendMidi(msg, numBytes, now, context);
-    }
-
-    public void sendPlayMsg(Context context)
-    {
-        byte[] buffer = new byte[32];
-        int numBytes = 0;
-        buffer[numBytes++] = (byte) (0xF0); // MMC
-        buffer[numBytes++] = (byte) (0x7F); // MMC
-        buffer[numBytes++] = (byte) (0x7F); // all devices
-        buffer[numBytes++] = (byte) (0x06); // command
-        buffer[numBytes++] = (byte) (0x02); // play
-        buffer[numBytes++] = (byte) (0xF7); // end
-        long now = System.nanoTime();
-
-        sendMidi(buffer, numBytes, now, context);
-        Toast rx = Toast.makeText(context, "Sending Playmsg", Toast.LENGTH_SHORT);
-        rx.show();
-    }
-
-    public void establishConnection() //TODO: create method for case that device is connected on app start
-    {
-        if(mInfos.length > 0)
+        if (unityContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_MIDI))
         {
-            MidiDeviceInfo receivervInfo = mInfos[0];
-            mManager.openDevice(receivervInfo, new MidiManager.OnDeviceOpenedListener()
-            {
-                @Override
-                public void onDeviceOpened(MidiDevice device)
-                {
-                    if(device != null)
-                    {
-                        mDevice = device;
-                        mInputPort = mDevice.openInputPort(0); // wird by default auf ersten port zugewiesen
-                    }
-                }
-            }, null);
+            return true;
         }
+        return false;
     }
 
-   //    @Override
-   //public void onDeviceAdded(final MidiDeviceInfo info) {
-   //    Toast added = Toast.makeText(context, "Device added", Toast.LENGTH_SHORT);
-   //    added.show();
-   //}
+    public void SetupPlugin(Context unityContext)
+    {
+        _unityContext = unityContext;
+        _mManager = (MidiManager)_unityContext.getSystemService(Context.MIDI_SERVICE);
 
-   //@Override
-   //public void onDeviceRemoved(final MidiDeviceInfo info) {
-   //    Toast removed = Toast.makeText(context, "Device removed", Toast.LENGTH_SHORT);
-   //    removed.show();
-   //    //mInputPort.close();
-   //}
+        if(_mManager.getDevices().length > 0)
+        {
+            OpenMDeviceAndInputPort(_mManager.getDevices()[0]);
+        }
 
-   //@Override
-   //public void onDeviceStatusChanged(final MidiDeviceStatus status) {
-   //   
-   //}
+        _mManager.registerDeviceCallback(new MidiManager.DeviceCallback()
+        {
+            public void onDeviceAdded(MidiDeviceInfo info)
+            {
+                Log.i("MIDI PLUGIN", "DEVICE ADDED");
+                OpenMDeviceAndInputPort(info);
+            }
+
+            public void onDeviceRemoved(MidiDeviceInfo info)
+            {
+                try
+                {
+                    _mDevice.close();
+                    Log.i("MIDI PLUGIN", "DEVICE REMOVED");
+                }
+                catch (IOException e)
+                {
+                    Log.e("MIDI PLUGIN", "Device couldn't be closed");
+                }
+            }
+        }, null);
+    }
+
+    private void OpenMDeviceAndInputPort(MidiDeviceInfo mDeviceInfo)
+    {
+        _mManager.openDevice(mDeviceInfo, new MidiManager.OnDeviceOpenedListener()
+        {
+            @Override
+            public void onDeviceOpened(MidiDevice device)
+            {
+                if (device == null)
+                {
+                    Log.e("MIDIDEVICE", "Device couldn't be opened " + mDeviceInfo);
+                }
+                else
+                {
+                    _mDevice = device;
+                    OpenInputPortWrapper(device);
+                }
+            }
+        }, null);
+    }
+
+    private void OpenInputPortWrapper(MidiDevice mDevice)
+    {
+        MidiDeviceInfo mDeviceInfo = mDevice.getInfo();
+
+        for(int i = 0; i < mDeviceInfo.getInputPortCount(); i++)
+        {
+            MidiInputPort mInputPort = _mDevice.openInputPort(i);
+            if(mInputPort != null)
+            {
+                _mInputPort = mInputPort;
+                Log.i("MIDI PLUGIN", "Inputport opened");
+                return;
+            }
+        }
+        Log.w("MIDI PLUGIN", "Device has no free InputPort");
+    }
 }
