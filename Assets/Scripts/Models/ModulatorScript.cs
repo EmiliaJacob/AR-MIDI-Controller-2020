@@ -25,7 +25,7 @@ public class ModulatorScript : MonoBehaviour
     public GameObject ModAndCoordParent;
     public ArState ArState;
     public HandTrackingInfo TrackingInfos;
-    public PluginWrapper PluginWrapper;
+    public MidiPluginWrapper PluginWrapper;
     public Dropdown XMsgType;
     public Dropdown YMsgType;
     public Dropdown ZMsgType;
@@ -108,16 +108,16 @@ public class ModulatorScript : MonoBehaviour
                 {
                     if (GetPitch(posOnAxisInCoord) != _lastPitch[axis]) //TODO: implement running status
                     {
-                        PluginWrapper.SendNoteOff(axis,_lastPitch[axis], _lastChannel[axis]);
+                        PluginWrapper.SendNoteOff(axis,_lastChannel[axis], _lastPitch[axis], DEFAULT_VELOCITY);
                         int pitch = GetPitch(posOnAxisInCoord);
-                        PluginWrapper.SendNoteOn(axis, pitch, DEFAULT_VELOCITY, GetChannel(axis));
+                        PluginWrapper.SendNoteOn(axis, GetChannel(axis), pitch, DEFAULT_VELOCITY);
                        _lastPitch[axis] = pitch;
                         _lastChannel[axis] = GetChannel(axis);
                     }
                 }
                 return;
             case "Cc":
-                PluginWrapper.SendCcMsg(posOnAxisInCoord, axis, GetChannel(axis));
+                PluginWrapper.SendCcMsg(GetChannel(axis), axis, posOnAxisInCoord);
                 return;
             default:
                 Debug.Log($"Wrong MessageType On {axis}");
@@ -192,7 +192,7 @@ public class ModulatorScript : MonoBehaviour
             {
                 if (GetMsgType(i) == "Note")
                 {
-                    PluginWrapper.SendNoteOff(i, _lastPitch[i], _lastChannel[i]);
+                    PluginWrapper.SendNoteOff(i, _lastChannel[i], _lastPitch[i], DEFAULT_VELOCITY);
                 }
             }
             return false;
