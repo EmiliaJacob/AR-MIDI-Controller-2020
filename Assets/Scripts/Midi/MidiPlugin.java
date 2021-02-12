@@ -17,9 +17,9 @@ public class MidiPlugin
     private MidiInputPort _mInputPort;
     private boolean _readyToSendMsg;
 
-    private static final int NOTE_ON_STATUS = 9;
-    private static final int NOTE_OFF_STATUS = 8;
-    private static final int Cc_STATUS = 11;
+    private static final int NOTE_ON_STATUS = 144;
+    private static final int NOTE_OFF_STATUS = 128;
+    private static final int CC_STATUS = 176;
 
     //All public Methods will be called from unity TODO: Add Unity to Name of each public method
     public boolean UnityCheckForMidiSupport(Context unityContext)
@@ -76,7 +76,7 @@ public class MidiPlugin
         byte [] message = CreateMidiMessage(messageType, channel, data1, data2);
         SendMidiMessage(message);
     }
-    
+
     private void Close() throws IOException
     {
         if(_mInputPort != null)
@@ -84,7 +84,7 @@ public class MidiPlugin
         if(_mDevice != null)
             _mDevice.close();
     }
-    
+
     private byte[] CreateMidiMessage(String messsageType, int channel, int data1, int data2)
     {
         byte statusByte = CreateStatusByte(messsageType, channel);
@@ -99,16 +99,16 @@ public class MidiPlugin
         {
             _mInputPort.send(message, 0, message.length);
             Log.i("MIDI PLUGIN", "StatusByte = "
-                    + (int)message[0] + "DataByte1 = "
-                    + (int)message[1] + "DataByte2 = "
+                    + (int)message[0] + ", DataByte1 = "
+                    + (int)message[1] + ", DataByte2 = "
                     + (int)message[2]
                     + " -- was sucessfully sent");
         }
         catch (IOException e)
         {
             Log.e("MIDI PLUGIN", "StatusByte = "
-                    + (int)message[0] + "DataByte1 = "
-                    + (int)message[1] + "DataByte2 = "
+                    + (int)message[0] + ", DataByte1 = "
+                    + (int)message[1] + ", DataByte2 = "
                     + (int)message[2]
                     + " -- could not be sent");
         }
@@ -119,11 +119,11 @@ public class MidiPlugin
         switch(messageType)
         {
             case "NoteOn":
-                return (byte)(NOTE_ON_STATUS * 10 + channel);
+                return (byte)(NOTE_ON_STATUS + channel);
             case "NoteOff":
-                return (byte)(NOTE_OFF_STATUS * 10 + channel);
+                return (byte)(NOTE_OFF_STATUS + channel);
             default:
-                return (byte)(Cc_STATUS * 10 + channel);
+                return (byte)(CC_STATUS + channel);
         }
     }
 
