@@ -5609,12 +5609,12 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: c4f2c8d05d3d49941813bdab2e5ba107,
         type: 3}
       propertyPath: m_Name
-      value: Coordinates
+      value: CoordinateSystemGroup
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: c4f2c8d05d3d49941813bdab2e5ba107,
         type: 3}
       propertyPath: m_Name
-      value: CoordObj
+      value: CoordinateSystem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4f2c8d05d3d49941813bdab2e5ba107, type: 3}
@@ -8542,6 +8542,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1114040580}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1577749884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1577749883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6712cb67b225b764fb02e4dfc330d5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MessageTypeX: {fileID: 500176249}
+  MessageTypeY: {fileID: 2102629269}
+  MessageTypeZ: {fileID: 497185507}
+  ChannelX: {fileID: 518740881}
+  ChannelY: {fileID: 1751325312}
+  ChannelZ: {fileID: 1539942898}
 --- !u!1 &1587286395
 GameObject:
   m_ObjectHideFlags: 0

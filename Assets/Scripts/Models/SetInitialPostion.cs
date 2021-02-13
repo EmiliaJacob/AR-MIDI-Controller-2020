@@ -14,7 +14,7 @@ public class SetInitialPostion : MonoBehaviour
                                          transform.position.y,
                                          Camera.main.transform.position.z);
         transform.LookAt(lookTarget);
-        Modulator.GetComponent<ModulatorScript>().SetModulatorToNull();
+        Modulator.GetComponent<Modulator>().SetToOrigin();
 
        //var meshOfCoordObj = Coordinates.GetComponent<MeshFilter>().mesh;
        //var newModPosInWorld = Coordinates.transform.TransformPoint(

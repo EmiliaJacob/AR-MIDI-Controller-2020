@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ResetModulatorPositionScript : MonoBehaviour
 {
-    public ModulatorScript ModScript;
+    public Modulator ModScript;
     //public GameObject CoordinateObject;
     //public Text UiPosMod;
 
@@ -19,6 +19,6 @@ public class ResetModulatorPositionScript : MonoBehaviour
     }*/
    public void ResetModulatorToNull()
     {
-        ModScript.SetModulatorToNull();
+        ModScript.SetToOrigin();
     }
 }

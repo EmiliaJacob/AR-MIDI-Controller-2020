@@ -9,6 +9,7 @@ import android.media.midi.MidiManager;
 import android.util.Log;
 
 import java.io.IOException;
+
 public class MidiPlugin
 {
     private Context _unityContext;
@@ -21,7 +22,7 @@ public class MidiPlugin
     private static final int NOTE_OFF_STATUS = 128;
     private static final int CC_STATUS = 176;
 
-    //All public Methods will be called from unity TODO: Add Unity to Name of each public method
+    //All public Methods will be called from unity
     public boolean UnityCheckForMidiSupport(Context unityContext)
     {
         if (unityContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_MIDI))
@@ -36,7 +37,7 @@ public class MidiPlugin
         }
     }
 
-    public void UnitySetupPlugin(Context unityContext) // TODO: In startup o.Ä umbenennen
+    public void UnitySetupPlugin(Context unityContext)
     {
         _readyToSendMsg = false;
         _unityContext = unityContext;
@@ -44,7 +45,7 @@ public class MidiPlugin
 
         if(_mManager.getDevices().length > 0)
         {
-            OpenDeviceAndInputPort(_mManager.getDevices()[0]);
+            EstablishConnection(_mManager.getDevices()[0]);
         }
 
         _mManager.registerDeviceCallback(new MidiManager.DeviceCallback()
@@ -52,7 +53,7 @@ public class MidiPlugin
             public void onDeviceAdded(MidiDeviceInfo info)
             {
                 Log.i("MIDI PLUGIN", "Plugged in ");
-                OpenDeviceAndInputPort(info);
+                EstablishConnection(info);
             }
 
             public void onDeviceRemoved(MidiDeviceInfo info)
@@ -127,7 +128,7 @@ public class MidiPlugin
         }
     }
 
-    private void OpenDeviceAndInputPort(MidiDeviceInfo mDeviceInfo) // TODO: Refactor doesnt do only one thing
+    private void EstablishConnection(MidiDeviceInfo mDeviceInfo)
     {
         _mManager.openDevice(mDeviceInfo, new MidiManager.OnDeviceOpenedListener()
         {
@@ -137,18 +138,19 @@ public class MidiPlugin
                 if (device == null)
                 {
                     Log.e("MIDI PLUGIN", "Device couldn't be opened " + mDeviceInfo);
+
                 }
                 else
                 {
                     _mDevice = device;
+                    OpenInputPort(_mDevice);
                     Log.i("MIDI PLUGIN", "Device was sucessfully opened");
-                    OpenInputPortWrapper(device);
                 }
             }
         }, null);
     }
 
-    private void OpenInputPortWrapper(MidiDevice mDevice)
+    private void OpenInputPort(MidiDevice mDevice)
     {
         MidiDeviceInfo mDeviceInfo = mDevice.getInfo();
 

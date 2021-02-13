@@ -1,19 +1,13 @@
 {
     "m_SelectedDeviceId": "2998162722047ece",
     "m_SelectedPackage": {
-        "deviceId": "2998162722047ece",
-        "name": "com.manomotion.arfoundationssdkceexample",
-        "processId": 31916,
+        "deviceId": "",
+        "name": "",
+        "processId": 0,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.android.settings",
-            "processId": 27189,
-            "exited": true
-        },
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
@@ -42,19 +36,13 @@
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 31916,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 7596,
             "exited": false
-        },
-        {
-            "deviceId": "192.168.2.102:5555",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 28304,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.2.102:5555",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 31970,
-            "exited": true
         },
         {
             "deviceId": "192.168.2.102:5555",
@@ -78,6 +66,18 @@
             "deviceId": "192.168.2.102:5555",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 9857,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.2.102:5555",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 22592,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.2.102:5555",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 23798,
             "exited": false
         }
     ],

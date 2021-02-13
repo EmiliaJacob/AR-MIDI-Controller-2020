@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ToggleDebugMode : MonoBehaviour
 {
-    public ModulatorScript ModulatorScript;
+    public Modulator ModulatorScript;
 
     public void Toggle()
     {
-        ModulatorScript.DebugMode = !ModulatorScript.DebugMode;
+        Modulator.DebugMode = !Modulator.DebugMode;
     }
 }
