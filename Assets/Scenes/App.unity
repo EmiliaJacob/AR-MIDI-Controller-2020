@@ -1651,19 +1651,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f70aa73d24100e42a16e392d410a0f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NullPosModInWorld: {x: 0, y: 0, z: 0}
-  UiPosMod: {fileID: 1985308838}
-  CoordObj: {fileID: 1577749883}
+  OriginInWorld: {x: 0, y: 0, z: 0}
   ModAndCoordParent: {fileID: 854905462}
   ArState: {fileID: 1980159960}
   TrackingInfos: {fileID: 1345564976}
-  PluginWrapper: {fileID: 841075152}
-  XMsgType: {fileID: 500176249}
-  YMsgType: {fileID: 2102629269}
-  ZMsgType: {fileID: 497185507}
-  XChannel: {fileID: 518740881}
-  YChannel: {fileID: 1751325312}
-  ZChannel: {fileID: 1539942898}
+  MidiPluginWrapper: {fileID: 0}
+  CoordinateSystem: {fileID: 1577749884}
 --- !u!135 &302988620
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5849,6 +5842,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1131307262}
   m_CullTransparentMesh: 0
+--- !u!1 &1133424102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1133424104}
+  - component: {fileID: 1133424103}
+  m_Layer: 0
+  m_Name: HandTracking
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1133424103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133424102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111dc2a419f47414c81c9c8c12045d44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Modulator: {fileID: 0}
+  CoordinateSystem: {fileID: 0}
+--- !u!4 &1133424104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1133424102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 760.44934, y: 850.4782, z: -1513.9161}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1152204771
 GameObject:
   m_ObjectHideFlags: 0
@@ -7899,7 +7937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816b289ef451e094f9ae174fb4cf8db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UseCustomMaterial: 0
+  m_UseCustomMaterial: 1
   m_CustomMaterial: {fileID: 2100000, guid: eacd1caffb55cd84e8d818a52c05315f, type: 2}
   m_UseCustomRendererAsset: 0
   m_CustomRendererAsset: {fileID: 0}
@@ -8560,6 +8598,7 @@ MonoBehaviour:
   ChannelX: {fileID: 518740881}
   ChannelY: {fileID: 1751325312}
   ChannelZ: {fileID: 1539942898}
+  CoordinateUi: {fileID: 0}
 --- !u!1 &1587286395
 GameObject:
   m_ObjectHideFlags: 0
@@ -9493,7 +9532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1746239939
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9509,9 +9548,9 @@ RectTransform:
   m_Father: {fileID: 1036100727}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 459.79947, y: 33.355667}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 60}
   m_Pivot: {x: 0.6993316, y: 10.067928}
 --- !u!114 &1746239940
@@ -10582,8 +10621,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1152723002}
   m_HandleRect: {fileID: 1152723001}
   m_Direction: 0
-  m_Value: 0
-  m_Size: 0.49998134
+  m_Value: -0.00000007629113
+  m_Size: 0.49998146
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:

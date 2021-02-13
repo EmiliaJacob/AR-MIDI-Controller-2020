@@ -14,6 +14,7 @@ public class CoordinateSystem : MonoBehaviour
     public Dropdown ChannelX;
     public Dropdown ChannelY;
     public Dropdown ChannelZ;
+    public Text CoordinateUi;
 
     public Axis X;
     public Axis Y;
@@ -68,16 +69,18 @@ public class CoordinateSystem : MonoBehaviour
         return delta;
     }
 
-    public Vector3Int GetModulatorPosition(Vector3 modulatorPositionUnity)
+    public void SetModulatorPosition(Vector3 modulatorPositionUnity)
     {
-       var position = new Vector3();
        var delta = GetDeltaToOrigin(modulatorPositionUnity);
 
-       position.x = delta.x * X.StepLenghtInUnity;
-       position.y = delta.y * Y.StepLenghtInUnity;
-       position.z = delta.z * Z.StepLenghtInUnity;
-        
-       return Vector3Int.RoundToInt(position); // TODO: Rounding here necessary? Maybe it should be done at the MIDI Class where a rounded Value is needed
+       X.Position = (int)(delta.x * X.StepLenghtInUnity);
+       Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
+       Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
+    }
+
+    public void UpdateCoordinateUi()
+    {
+        CoordinateUi.text = $"x: {X.Position}, y: {Y.Position}, z: {Z.Position}";
     }
 
     public bool CheckIfModulatorInBoundaries(Vector3 modulatorPosition)
@@ -92,6 +95,13 @@ public class CoordinateSystem : MonoBehaviour
     {
         var closestPoint = _rendererCoordinateSystem.bounds.ClosestPoint(modulatorPosition);
         return closestPoint;
+    }
+
+    public void UpdatePosition(int x, int y, int z)
+    {
+        X.Position = x;
+        Y.Position = y;
+        Z.Position = z;
     }
 
     void Update()

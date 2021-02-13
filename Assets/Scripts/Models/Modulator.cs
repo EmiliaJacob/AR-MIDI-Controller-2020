@@ -4,20 +4,22 @@ using UnityEngine.UI;
 public class Modulator : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
+    private Midi _midi;
     //private Vector3Int _modPosInCoord;
     public static bool DebugMode = false;
 
     private const int DEFAULT_VELOCITY = 120;
     public Vector3 OriginInWorld; 
-    public Text UiPosMod;
+    
     public GameObject ModAndCoordParent;
     public ArState ArState;
     public HandTrackingInfo TrackingInfos;
-    public MidiPluginWrapper PluginWrapper;
+    public MidiPluginWrapper MidiPluginWrapper;
     public CoordinateSystem CoordinateSystem;
     
     void Start()
     {
+        _midi = new Midi(MidiPluginWrapper);
        // _rendererCoordObj = CoordObj.GetComponent<Renderer>();
        // _meshOfCoordObj = CoordObj.GetComponent<MeshFilter>().mesh;
         //Vector3 axisLenghtUnity = CoordObj.GetComponent<MeshFilter>().mesh.bounds.size;
@@ -36,17 +38,31 @@ public class Modulator : MonoBehaviour
         {
             if (_modulatorMovementActive)
             {
-                //var modulatorPosition = GetModPosInCoord();
-               var modulatorPosition = CoordinateSystem.GetModulatorPosition(transform.position);
-               UiPosMod.text = $"x: {modulatorPosition.x}, y: {modulatorPosition.y}, z: {modulatorPosition.z}";
-               SendMidiMessage(CoordinateSystem.X, modulatorPosition.x); 
-               SendMidiMessage(CoordinateSystem.Y, modulatorPosition.y);
-               SendMidiMessage(CoordinateSystem.Z, modulatorPosition.z);
-               _modulatorMovementActive = MoveMod();
-            }
-            else
-            {
+                CoordinateSystem.SetModulatorPosition(transform.position);
+                CoordinateSystem.UpdateCoordinateUi();
+                _midi.SendMidiMessage(CoordinateSystem.X);
+                _midi.SendMidiMessage(CoordinateSystem.Y);
+                _midi.SendMidiMessage(CoordinateSystem.Z);
 
+                if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
+                {
+                    FollowHand();
+
+                    if (CoordinateSystem.CheckIfModulatorInBoundaries(transform.position) == false)
+                    {
+                        transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
+                    }
+                }
+                else
+                {
+                    _modulatorMovementActive = false;
+                    if (CoordinateSystem.X.ChosenMessageType == "Note")
+                        _midi.SendFinalNoteOffMessage(CoordinateSystem.X);
+                    if (CoordinateSystem.Y.ChosenMessageType == "Note")
+                        _midi.SendFinalNoteOffMessage(CoordinateSystem.Y);
+                    if (CoordinateSystem.Z.ChosenMessageType == "Note")
+                        _midi.SendFinalNoteOffMessage(CoordinateSystem.Z);
+                }
             }
         }
     }
@@ -59,73 +75,12 @@ public class Modulator : MonoBehaviour
        // UiPosMod.text = $"x: {newPosInCoord.x}, y: {newPosInCoord.y}, z: {newPosInCoord.z}"; //TODO: verschieben
     }
 
-    private static int _octave = 6; // TODO: verschieben
-
-    private void SendMidiMessage(Axis axis, int positionOnAxis) // TODO: Methode mur einmal für alle Achsen aufrufen
+    private void FollowHand()
     {
-        if(axis.ChosenMessageType == "Note")
-        {
-            if (GetPitch(positionOnAxis) != axis.LastPlayedNote) //TODO: implement running status
-                SendNoteMessage(axis, positionOnAxis);
-        }
-        else // CC Message
-        {
-            PluginWrapper.SendCcMsg(axis.ChosenChannel, axis.Index, positionOnAxis);
-        }
-    }
-
-    private void SendNoteMessage(Axis axis, int positionOnAxis)
-    {
-        PluginWrapper.SendNoteOff(axis.LastChosenChannel, axis.LastPlayedNote, DEFAULT_VELOCITY);
-        int pitch = GetPitch(positionOnAxis);
-        PluginWrapper.SendNoteOn(axis.ChosenChannel, pitch, DEFAULT_VELOCITY);
-        axis.LastPlayedNote = pitch; // TODO Update von Last Werten in Methode zu Axis auslagern
-        axis.LastChosenChannel = axis.ChosenChannel;
-        //axis.LastPlayedNote = pitch;
-        //axis.LastChosenChannel = GetChannel(axis);
-    }
-
-    public int GetPitch(int posOnAxisInCoord) // TODO: Oktave beschränken auf MIDI Protokoll //PRIVATE
-    {
-        float steplenght = 128 / 12;
-        int pitch = (int)(posOnAxisInCoord / steplenght);
-        int pitchAndOctave = pitch + (_octave * 12);
-        return (pitchAndOctave);
-    }
-
-    private bool MoveMod()
-    {
-        if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
-        {
-            var calculatedPos = ManoUtils.Instance.CalculateNewPosition(TrackingInfos.PalmCenterPosition,
+        var calculatedPos = ManoUtils.Instance.CalculateNewPosition(TrackingInfos.PalmCenterPosition,
                 TrackingInfos.Depth);
 
-            transform.position = calculatedPos;
-
-            if(CoordinateSystem.CheckIfModulatorInBoundaries(transform.position) == false)
-            {
-                transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
-            }
-
-            return true;
-        }
-        else
-        {
-            if(CoordinateSystem.X.ChosenMessageType == "Note") // TODO in Methode in eine andere Klasse verlagern
-                PluginWrapper.SendNoteOff(CoordinateSystem.X.LastChosenChannel, 
-                    CoordinateSystem.X.LastPlayedNote,
-                    DEFAULT_VELOCITY);
-            if(CoordinateSystem.Y.ChosenMessageType == "Note")
-                PluginWrapper.SendNoteOff(CoordinateSystem.Y.LastChosenChannel, 
-                    CoordinateSystem.Y.LastPlayedNote,
-                    DEFAULT_VELOCITY);
-            if(CoordinateSystem.Z.ChosenMessageType == "Note")
-                PluginWrapper.SendNoteOff(CoordinateSystem.Z.LastChosenChannel, 
-                    CoordinateSystem.Z.LastPlayedNote,
-                    DEFAULT_VELOCITY);
-
-            return false;
-        }
+        transform.position = calculatedPos;
     }
 
     private void OnTriggerEnter(Collider collider) 
@@ -166,39 +121,39 @@ public class Modulator : MonoBehaviour
             transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
         }
 
-        var modulatorPosition = CoordinateSystem.GetModulatorPosition(transform.position);
-        UiPosMod.text = $"x: {modulatorPosition.x}, y: {modulatorPosition.y}, z: {modulatorPosition.z}";
-        DebugModeSendMidiMessage(CoordinateSystem.X, modulatorPosition.x);
-        DebugModeSendMidiMessage(CoordinateSystem.Y, modulatorPosition.y);
-        DebugModeSendMidiMessage(CoordinateSystem.Z, modulatorPosition.z);
+        CoordinateSystem.SetModulatorPosition(transform.position);
+       // UiPosMod.text = $"x: {modulatorPosition.x}, y: {modulatorPosition.y}, z: {modulatorPosition.z}";
+        DebugModeSendMidiMessage(CoordinateSystem.X);
+        DebugModeSendMidiMessage(CoordinateSystem.Y);
+        DebugModeSendMidiMessage(CoordinateSystem.Z);
     }
 
     private void DebugModeSendNoteFinalNoteOffs()
     {
         if (CoordinateSystem.X.ChosenMessageType == "Note")
-            PluginWrapper.SendNoteOff(CoordinateSystem.X.LastChosenChannel,
+            MidiPluginWrapper.SendNoteOff(CoordinateSystem.X.LastChosenChannel,
                 CoordinateSystem.X.LastPlayedNote,
                 DEFAULT_VELOCITY);
         if (CoordinateSystem.Y.ChosenMessageType == "Note")
-            PluginWrapper.SendNoteOff(CoordinateSystem.Y.LastChosenChannel,
+            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Y.LastChosenChannel,
                 CoordinateSystem.Y.LastPlayedNote,
                 DEFAULT_VELOCITY);
         if (CoordinateSystem.Z.ChosenMessageType == "Note")
-            PluginWrapper.SendNoteOff(CoordinateSystem.Z.LastChosenChannel,
+            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Z.LastChosenChannel,
                 CoordinateSystem.Z.LastPlayedNote,
                 DEFAULT_VELOCITY);
     }
 
-    private void DebugModeSendMidiMessage(Axis axis, int posOnAxisInCoord)
+    private void DebugModeSendMidiMessage(Axis axis)
     {
         switch (axis.ChosenMessageType)
         {
             case "Note":
-                if (GetPitch(posOnAxisInCoord) != axis.LastPlayedNote) //TODO: implement running status
+                if (_midi.GetPitch(axis) != axis.LastPlayedNote) //TODO: implement running status
                 {
                     //PluginWrapper.SendNoteOff(axis.LastPlayedNote, _lastChannel[axis]);
                     Debug.Log($"{axis} Off || pitch: {axis.LastPlayedNote} || channel: {axis.LastChosenChannel}");
-                    int pitch = GetPitch(posOnAxisInCoord);
+                    int pitch = _midi.GetPitch(axis);
                     //PluginWrapper.SendNoteOn(pitch, DEFAULT_VELOCITY, GetChannel(axis) - 1);
                     Debug.Log($"{axis} On || pitch: {pitch} || channel: {axis.ChosenChannel}");
                     axis.LastPlayedNote = pitch;
@@ -206,8 +161,7 @@ public class Modulator : MonoBehaviour
                 }
                 return;
             case "Cc":
-                //UiPosMod.text = "wee";
-                Debug.Log($"CC Message: Value = {posOnAxisInCoord} | Axis = {axis} | Channel = {axis.ChosenChannel}");
+                Debug.Log($"CC Message: Value = {axis.Position} | Axis = {axis} | Channel = {axis.ChosenChannel}");
                 //PluginWrapper.SendCcMsg(posOnAxisInCoord, axis, GetChannel(axis) - 1);
                 return;
             default:
@@ -238,5 +192,61 @@ public class Modulator : MonoBehaviour
     //   //     RoundToMidiMsgRange((int)yPositionInCoord),
     //   //     RoundToMidiMsgRange((int)zPositionInCoord)
     //   //     );
+    //}
+
+    // private bool MoveMod()
+    // {
+    //     if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
+    //     {
+    //         FollowHand();
+    //
+    //         if(CoordinateSystem.CheckIfModulatorInBoundaries(transform.position) == false)
+    //         {
+    //             transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
+    //         }
+    //     }
+    //     else
+    //     {
+    //         _modulatorMovementActive = false;
+    //         if (CoordinateSystem.X.ChosenMessageType == "Note")
+    //             _midi.SendFinalNoteOffMessage(CoordinateSystem.X);            
+    //         if (CoordinateSystem.Y.ChosenMessageType == "Note")
+    //             _midi.SendFinalNoteOffMessage(CoordinateSystem.Y);            
+    //         if (CoordinateSystem.Z.ChosenMessageType == "Note")
+    //             _midi.SendFinalNoteOffMessage(CoordinateSystem.Z);
+    //         return false;
+    //     }
+    // }
+
+    //private static int _octave = 6; // TODO: verschieben
+
+    //private void SendMidiMessage(Axis axis) // TODO: Methode mur einmal für alle Achsen aufrufen
+    //{
+    //    if(axis.ChosenMessageType == "Note")
+    //    {
+    //        if (GetPitch(axis.Position) != axis.LastPlayedNote) //TODO: implement running status
+    //            SendNoteMessage(axis, axis.Position);
+    //    }
+    //    else // CC Message
+    //    {
+    //        PluginWrapper.SendCcMsg(axis.ChosenChannel, axis.Index, axis.Position);
+    //    }
+    //}
+
+    //private void SendNoteMessage(Axis axis, int positionOnAxis)
+    //{
+    //    PluginWrapper.SendNoteOff(axis.LastChosenChannel, axis.LastPlayedNote, DEFAULT_VELOCITY);
+    //    int pitch = GetPitch(positionOnAxis);
+    //    PluginWrapper.SendNoteOn(axis.ChosenChannel, pitch, DEFAULT_VELOCITY);
+    //    axis.LastPlayedNote = pitch; // TODO Update von Last Werten in Methode zu Axis auslagern Oder für allen nach Coordinatesystem
+    //    axis.LastChosenChannel = axis.ChosenChannel;
+    //}
+
+    //public int GetPitch(int posOnAxisInCoord) // TODO: Oktave beschränken auf MIDI Protokoll 
+    //{
+    //    float steplenght = 128 / 12;
+    //    int pitch = (int)(posOnAxisInCoord / steplenght);
+    //    int pitchAndOctave = pitch + (_octave * 12);
+    //    return (pitchAndOctave);
     //}
 }
