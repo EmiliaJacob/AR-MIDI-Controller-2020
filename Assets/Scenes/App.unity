@@ -1655,7 +1655,7 @@ MonoBehaviour:
   ModAndCoordParent: {fileID: 854905462}
   ArState: {fileID: 1980159960}
   TrackingInfos: {fileID: 1345564976}
-  MidiPluginWrapper: {fileID: 0}
+  MidiPluginWrapper: {fileID: 841075152}
   CoordinateSystem: {fileID: 1577749884}
 --- !u!135 &302988620
 SphereCollider:
@@ -7937,7 +7937,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 816b289ef451e094f9ae174fb4cf8db0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UseCustomMaterial: 1
+  m_UseCustomMaterial: 0
   m_CustomMaterial: {fileID: 2100000, guid: eacd1caffb55cd84e8d818a52c05315f, type: 2}
   m_UseCustomRendererAsset: 0
   m_CustomRendererAsset: {fileID: 0}
@@ -8598,7 +8598,7 @@ MonoBehaviour:
   ChannelX: {fileID: 518740881}
   ChannelY: {fileID: 1751325312}
   ChannelZ: {fileID: 1539942898}
-  CoordinateUi: {fileID: 0}
+  CoordinateUi: {fileID: 1985308838}
 --- !u!1 &1587286395
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,13 +4,11 @@ using UnityEngine.UI;
 public class Modulator : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
-    private Midi _midi;
-    //private Vector3Int _modPosInCoord;
-    public static bool DebugMode = false;
-
     private const int DEFAULT_VELOCITY = 120;
+    private Midi _midi;
+
+    public static bool DebugMode = true;
     public Vector3 OriginInWorld; 
-    
     public GameObject ModAndCoordParent;
     public ArState ArState;
     public HandTrackingInfo TrackingInfos;
@@ -20,16 +18,6 @@ public class Modulator : MonoBehaviour
     void Start()
     {
         _midi = new Midi(MidiPluginWrapper);
-       // _rendererCoordObj = CoordObj.GetComponent<Renderer>();
-       // _meshOfCoordObj = CoordObj.GetComponent<MeshFilter>().mesh;
-        //Vector3 axisLenghtUnity = CoordObj.GetComponent<MeshFilter>().mesh.bounds.size;
-       // _xStepLenghtUnity = 128 / axisLenghtUnity.x;
-       // _yStepLenghtUnity = 128 / axisLenghtUnity.y; 
-       // _zStepLenghtUnity = 128 / axisLenghtUnity.z;
-        //_lastPitch = new int[] { -1, -1, -1 }; 
-        //_lastChannel = new int[] {int.Parse(XChannel.captionText.text), 
-        //                          int.Parse(YChannel.captionText.text),
-        //                          int.Parse(ZChannel.captionText.text)};
     }
 
     void Update()
@@ -85,7 +73,7 @@ public class Modulator : MonoBehaviour
 
     private void OnTriggerEnter(Collider collider) 
     {
-        collider.gameObject.transform.position = transform.position;
+        //collider.gameObject.transform.position = transform.position;
         GetComponent<Renderer>().material.color = new Color(0, 255, 0);
     }
 

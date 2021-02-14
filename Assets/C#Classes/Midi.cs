@@ -12,11 +12,12 @@ public class Midi
     {
         _midiPluginWrapper = midiPluginWrapper;
     }
-
+    
     public void SendMidiMessage(Axis axis)
     {
         if (axis.ChosenMessageType == "Note")
         {
+            Debug.Log("SendMidiMessage  Axis.ChosenMessageType == Note"); 
             if (GetPitch(axis) != axis.LastPlayedNote) //TODO: implement running status
                 SendNoteMessage(axis);
         }

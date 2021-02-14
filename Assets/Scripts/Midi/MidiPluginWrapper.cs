@@ -7,14 +7,15 @@ public class MidiPluginWrapper : MonoBehaviour // TODO: Muss es Skript sein?
 {
     private AndroidJavaClass _unityAndroidClass;
     private AndroidJavaObject _midiPlugin;
-    public Modulator modScript;
+    public Modulator Modulator;
 
     void Start()
     {
         _unityAndroidClass =  new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         _midiPlugin = new AndroidJavaObject("com.example.midiplugin.MidiPlugin");
         //TODO: Kompatibilitätscheck hinzufügen
-        //_midiPlugin.Call("UnitySetupPlugin", GetContext());
+        if(Modulator.DebugMode == false)
+            _midiPlugin.Call("UnitySetupPlugin", GetContext());
     }
 
     private AndroidJavaObject GetContext()

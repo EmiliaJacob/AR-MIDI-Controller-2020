@@ -11,18 +11,6 @@
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 28231,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.sec.android.app.launcher",
-            "processId": 1842,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 28304,
             "exited": true
         },
@@ -42,6 +30,24 @@
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 7596,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 31483,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.sec.android.app.launcher",
+            "processId": 1815,
+            "exited": false
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 14437,
             "exited": false
         },
         {

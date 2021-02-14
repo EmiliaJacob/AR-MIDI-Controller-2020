@@ -54,11 +54,20 @@ public class CoordinateSystem : MonoBehaviour
     }
 
     public Vector3 GetOrigin()
-    {
+    { 
         var origin = transform.TransformPoint(
             _meshCoordinateSystem.bounds.min + new Vector3(
             _meshCoordinateSystem.bounds.size.x, 0, 0));
         return origin;
+    }
+
+    public void SetModulatorPosition(Vector3 modulatorPositionUnity)
+    {
+      //var delta = GetDeltaToOrigin(modulatorPositionUnity);
+      //
+      //X.Position = (int)(delta.x * X.StepLenghtInUnity);
+      //Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
+      //Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
     }
 
     public Vector3 GetDeltaToOrigin(Vector3 modulatorPositionUnity)
@@ -67,15 +76,6 @@ public class CoordinateSystem : MonoBehaviour
         var delta = transform.InverseTransformPoint(modulatorPositionUnity) -
             transform.InverseTransformPoint(origin); // TODO: Muss es lokal sein? 
         return delta;
-    }
-
-    public void SetModulatorPosition(Vector3 modulatorPositionUnity)
-    {
-       var delta = GetDeltaToOrigin(modulatorPositionUnity);
-
-       X.Position = (int)(delta.x * X.StepLenghtInUnity);
-       Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
-       Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
     }
 
     public void UpdateCoordinateUi()

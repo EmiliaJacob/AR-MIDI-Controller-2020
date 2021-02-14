@@ -2,8 +2,8 @@
 
 public class Axis
 {
-    private Dropdown MessageType;
-    private Dropdown Channel;
+    private Dropdown _messageType;
+    private Dropdown _channel;
 
     public int Index { get; }
     public int Position;
@@ -14,28 +14,31 @@ public class Axis
 
     public string ChosenMessageType
     {
-        get {return MessageType.captionText.text;}
+        get {return _messageType.captionText.text;}
     }
             
     public int ChosenChannel
     {
-        get {return int.Parse(Channel.captionText.text) - 1;}
+        get {return int.Parse(_channel.captionText.text) - 1;}
     }
 
     public Axis(int index)
     {
         Index = index;
+
         Position = 0;
+        LastPlayedNote = -1;
     }
 
     public void AssignMessageTypeDropdown(Dropdown messageType)
     {
-        MessageType = messageType;
+        _messageType = messageType;
     }
 
     public void AssignChannelDropdown(Dropdown channel)
     {
-        Channel = channel;
+        _channel = channel;
+        LastChosenChannel = ChosenChannel;
     }
 
     public void SetStepLenghtUnity(float axesLenghtUnity)
