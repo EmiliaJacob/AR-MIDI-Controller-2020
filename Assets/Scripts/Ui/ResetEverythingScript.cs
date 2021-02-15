@@ -20,6 +20,6 @@ public class ResetEverythingScript : MonoBehaviour
         var newNullPosMod = Coordinates.transform.TransformPoint(
             meshOfCoordObj.bounds.min + new Vector3(
             meshOfCoordObj.bounds.size.x, 0, 0));
-        Modulator.GetComponent<ModulatorScript>().NullPosModInWorld = newNullPosMod;
+        Modulator.GetComponent<Modulator>().OriginInWorld = newNullPosMod;
     }
 }

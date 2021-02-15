@@ -9,6 +9,7 @@ import android.media.midi.MidiManager;
 import android.util.Log;
 
 import java.io.IOException;
+
 public class MidiPlugin
 {
     private Context _unityContext;
@@ -21,7 +22,7 @@ public class MidiPlugin
     private static final int NOTE_OFF_STATUS = 128;
     private static final int CC_STATUS = 176;
 
-    //All public Methods will be called from unity TODO: Add Unity to Name of each public method
+    //All public Methods will be called from unity
     public boolean UnityCheckForMidiSupport(Context unityContext)
     {
         if (unityContext.getPackageManager().hasSystemFeature(PackageManager.FEATURE_MIDI))
@@ -36,23 +37,22 @@ public class MidiPlugin
         }
     }
 
-    public void UnitySetupPlugin(Context unityContext) // TODO: In startup o.Ä umbenennen
+    public void UnitySetupPlugin(Context unityContext)
     {
         _readyToSendMsg = false;
         _unityContext = unityContext;
         _mManager = (MidiManager)_unityContext.getSystemService(Context.MIDI_SERVICE);
 
         if(_mManager.getDevices().length > 0)
-        {
-            OpenDeviceAndInputPort(_mManager.getDevices()[0]);
-        }
+            EstablishConnection(_mManager.getDevices()[0]);
+
 
         _mManager.registerDeviceCallback(new MidiManager.DeviceCallback()
         {
             public void onDeviceAdded(MidiDeviceInfo info)
             {
                 Log.i("MIDI PLUGIN", "Plugged in ");
-                OpenDeviceAndInputPort(info);
+                EstablishConnection(info);
             }
 
             public void onDeviceRemoved(MidiDeviceInfo info)
@@ -81,6 +81,7 @@ public class MidiPlugin
     {
         if(_mInputPort != null)
             _mInputPort.close();
+
         if(_mDevice != null)
             _mDevice.close();
     }
@@ -93,11 +94,30 @@ public class MidiPlugin
         return new byte[] {statusByte, dataByte1, dataByte2};
     }
 
+    private byte CreateStatusByte(String messageType, int channel)
+    {
+        switch(messageType)
+        {
+            case "NoteOn":
+                return (byte)(NOTE_ON_STATUS + channel);
+            case "NoteOff":
+                return (byte)(NOTE_OFF_STATUS + channel);
+            default:
+                return (byte)(CC_STATUS + channel);
+        }
+    }
+
     private void SendMidiMessage(byte[] message)
     {
         try
         {
-            _mInputPort.send(message, 0, message.length);
+            if(_mInputPort != null)
+                _mInputPort.send(message, 0, message.length);
+            else
+            {
+                Log.i("MIDI PLUGIN", "InputPort is null");
+            }
+
             Log.i("MIDI PLUGIN", "StatusByte = "
                     + (int)message[0] + ", DataByte1 = "
                     + (int)message[1] + ", DataByte2 = "
@@ -114,20 +134,8 @@ public class MidiPlugin
         }
     }
 
-    private byte CreateStatusByte(String messageType, int channel)
-    {
-        switch(messageType)
-        {
-            case "NoteOn":
-                return (byte)(NOTE_ON_STATUS + channel);
-            case "NoteOff":
-                return (byte)(NOTE_OFF_STATUS + channel);
-            default:
-                return (byte)(CC_STATUS + channel);
-        }
-    }
 
-    private void OpenDeviceAndInputPort(MidiDeviceInfo mDeviceInfo) // TODO: Refactor doesnt do only one thing
+    private void EstablishConnection(MidiDeviceInfo mDeviceInfo)
     {
         _mManager.openDevice(mDeviceInfo, new MidiManager.OnDeviceOpenedListener()
         {
@@ -137,18 +145,19 @@ public class MidiPlugin
                 if (device == null)
                 {
                     Log.e("MIDI PLUGIN", "Device couldn't be opened " + mDeviceInfo);
+
                 }
                 else
                 {
                     _mDevice = device;
+                    OpenInputPort(_mDevice);
                     Log.i("MIDI PLUGIN", "Device was sucessfully opened");
-                    OpenInputPortWrapper(device);
                 }
             }
         }, null);
     }
 
-    private void OpenInputPortWrapper(MidiDevice mDevice)
+    private void OpenInputPort(MidiDevice mDevice)
     {
         MidiDeviceInfo mDeviceInfo = mDevice.getInfo();
 
