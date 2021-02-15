@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Midi
 {
-    private const int DEFAULT_VELOCITY = 120;
+    public const int DEFAULT_VELOCITY = 120;
     private int _octave = 6;
     private MidiPluginWrapper _midiPluginWrapper;
 
@@ -17,23 +17,27 @@ public class Midi
     {
         if (axis.ChosenMessageType == "Note")
         {
-            Debug.Log("SendMidiMessage  Axis.ChosenMessageType == Note"); 
             if (GetPitch(axis) != axis.LastPlayedNote) //TODO: implement running status
+            {
                 SendNoteMessage(axis);
+            }
+            else
+            {
+                //Debug.Log("Same pitch is getting played");
+            }
         }
         else // CC Message
         {
-            _midiPluginWrapper.SendCcMsg(axis.ChosenChannel, axis.Index, axis.Position);
+            _midiPluginWrapper.SendCcMsg(axis);
         }
     }
 
     public void SendNoteMessage(Axis axis)
     {
-        _midiPluginWrapper.SendNoteOff(axis.LastChosenChannel, axis.LastPlayedNote, DEFAULT_VELOCITY);
-        int pitch = GetPitch(axis);
-        _midiPluginWrapper.SendNoteOn(axis.ChosenChannel, pitch, DEFAULT_VELOCITY);
-        axis.LastPlayedNote = pitch; // TODO Update von Last Werten in Methode zu Axis auslagern Oder für allen nach Coordinatesystem
+        _midiPluginWrapper.SendNoteOff(axis);
+        axis.LastPlayedNote = GetPitch(axis); 
         axis.LastChosenChannel = axis.ChosenChannel;
+        _midiPluginWrapper.SendNoteOn(axis);
     }
 
     public int GetPitch(Axis axis) // TODO: Oktave beschränken auf MIDI Protokoll 
@@ -41,14 +45,13 @@ public class Midi
         float steplenght = 128 / 12;
         int pitch = (int)(axis.Position / steplenght);
         int pitchAndOctave = pitch + (_octave * 12);
+        //Debug.Log("PITCH: " + pitchAndOctave);
         return (pitchAndOctave);
     }
 
     public void SendFinalNoteOffMessage(Axis axis)
     {
         if (axis.ChosenMessageType == "Note") // TODO in Methode in eine andere Klasse verlagern
-            _midiPluginWrapper.SendNoteOff(axis.LastChosenChannel,
-                axis.LastPlayedNote,
-                DEFAULT_VELOCITY);
+            _midiPluginWrapper.SendNoteOff(axis);
     }
 }

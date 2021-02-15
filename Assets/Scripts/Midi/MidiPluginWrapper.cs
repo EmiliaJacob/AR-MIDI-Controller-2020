@@ -23,28 +23,39 @@ public class MidiPluginWrapper : MonoBehaviour // TODO: Muss es Skript sein?
          return _unityAndroidClass.GetStatic<AndroidJavaObject>("currentActivity");
     }
 
-    public void SendNoteOn(int channel, int pitch, int velocity)
+    public void SendNoteOn(Axis axis)
     {
-        Debug.Log($"NOTE ON, Pitch {pitch}, Vel {velocity}, Ch {channel}");
-        _midiPlugin.Call("UnitySendMidiMessage", "NoteOn", channel, pitch, velocity);
+        Debug.Log($"NOTE ON, Pitch {axis.LastPlayedNote}, Vel {Midi.DEFAULT_VELOCITY}, Ch {axis.LastChosenChannel}");
+        _midiPlugin.Call("UnitySendMidiMessage", "NoteOn", axis.LastChosenChannel, axis.LastPlayedNote, Midi.DEFAULT_VELOCITY);
     }
 
-    public void SendNoteOff(int channel, int pitch, int velocity)
+    public void SendNoteOff(Axis axis)
     {
-        Debug.Log($"NOTE OFF, Pitch {pitch}, Ch {channel}");
-        _midiPlugin.Call("UnitySendMidiMessage", "NoteOff", channel, pitch, velocity);
+        Debug.Log($"NOTE OFF, Pitch {axis.LastPlayedNote}, Ch {axis.LastChosenChannel}");
+        _midiPlugin.Call("UnitySendMidiMessage", "NoteOff", axis.LastChosenChannel, axis.LastPlayedNote, Midi.DEFAULT_VELOCITY);
     }
 
 
-    public void SendCcMsg(int channel, int axis, int positionInCoordinates)  
+    public void SendCcMsg(Axis axis)//TODO: Nur Axis übergeben
     {
-        Debug.Log($"{axis}: CC, Msg {positionInCoordinates}, Ch {channel}");
-        _midiPlugin.Call("UnitySendMidiMessage", "Cc", channel, axis, positionInCoordinates);
+        Debug.Log($"{axis.Index}: CC, Msg {axis.Position}, Ch {axis.ChosenChannel}");
+        _midiPlugin.Call("UnitySendMidiMessage", "Cc", axis.ChosenChannel, axis.Index, axis.Position);
     }
-
-    public void RouteAxis(int axis) // TODO: Anpassen
-    {
-       //Debug.Log($"{axis}: CC-ROUTING, Ch {modScript.GetChannel(axis)}");
-       //_midiPlugin.Call("UnitySendMidiMessage", "Cc", modScript.GetChannel(axis), axis, 0);
-    }
+    
+   public void RouteAxis(int axisIndex) // TODO: Anpassen
+   {
+        switch(axisIndex)
+        {
+            case 0:
+                _midiPlugin.Call("UnitySendMidiMessage", "Cc", Modulator.CoordinateSystem.X.ChosenChannel, Modulator.CoordinateSystem.X.Index, 0);
+                break;
+            case 1:
+                _midiPlugin.Call("UnitySendMidiMessage", "Cc", Modulator.CoordinateSystem.Y.ChosenChannel, Modulator.CoordinateSystem.Y.Index, 0);
+                break;
+            case 2:
+                _midiPlugin.Call("UnitySendMidiMessage", "Cc", Modulator.CoordinateSystem.Z.ChosenChannel, Modulator.CoordinateSystem.Z.Index, 0);
+                break;
+        }
+      Debug.Log($"Axis {axisIndex}: CC-ROUTING");
+   }
 }

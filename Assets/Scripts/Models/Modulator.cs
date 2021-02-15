@@ -4,10 +4,9 @@ using UnityEngine.UI;
 public class Modulator : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
-    private const int DEFAULT_VELOCITY = 120;
     private Midi _midi;
 
-    public static bool DebugMode = true;
+    public static bool DebugMode = false;
     public Vector3 OriginInWorld; 
     public GameObject ModAndCoordParent;
     public ArState ArState;
@@ -119,17 +118,11 @@ public class Modulator : MonoBehaviour
     private void DebugModeSendNoteFinalNoteOffs()
     {
         if (CoordinateSystem.X.ChosenMessageType == "Note")
-            MidiPluginWrapper.SendNoteOff(CoordinateSystem.X.LastChosenChannel,
-                CoordinateSystem.X.LastPlayedNote,
-                DEFAULT_VELOCITY);
+            MidiPluginWrapper.SendNoteOff(CoordinateSystem.X);
         if (CoordinateSystem.Y.ChosenMessageType == "Note")
-            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Y.LastChosenChannel,
-                CoordinateSystem.Y.LastPlayedNote,
-                DEFAULT_VELOCITY);
+            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Y);
         if (CoordinateSystem.Z.ChosenMessageType == "Note")
-            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Z.LastChosenChannel,
-                CoordinateSystem.Z.LastPlayedNote,
-                DEFAULT_VELOCITY);
+            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Z);
     }
 
     private void DebugModeSendMidiMessage(Axis axis)
@@ -157,84 +150,4 @@ public class Modulator : MonoBehaviour
                 return;
         }
     }
-
-    // private int RoundToMidiMsgRange(int input) 
-    // {
-    //     if (input > 127)
-    //         return 127;
-    //     else if (input < 0)
-    //         return 0;
-    //     else
-    //         return input;
-    // }
-
-    //private Vector3Int GetModPosInCoord() 
-    //{
-    //   // Vector3 deltaToNullLocal = CoordObj.transform.InverseTransformPoint(transform.position) -
-    //   //     CoordObj.transform.InverseTransformPoint(OriginInWorld); // TODO: muss es lokal sein?
-    //   // float xPositionInCoord = (deltaToNullLocal.x * _xStepLenghtUnity);
-    //   // float yPositionInCoord = (deltaToNullLocal.y * _yStepLenghtUnity);
-    //   // float zPositionInCoord = (deltaToNullLocal.z * _zStepLenghtUnity);
-    //   // return new Vector3Int( // TODO: EIGENTLICH NICHT NÖTIG?
-    //   //     RoundToMidiMsgRange(-1 * (int)xPositionInCoord),
-    //   //     RoundToMidiMsgRange((int)yPositionInCoord),
-    //   //     RoundToMidiMsgRange((int)zPositionInCoord)
-    //   //     );
-    //}
-
-    // private bool MoveMod()
-    // {
-    //     if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
-    //     {
-    //         FollowHand();
-    //
-    //         if(CoordinateSystem.CheckIfModulatorInBoundaries(transform.position) == false)
-    //         {
-    //             transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
-    //         }
-    //     }
-    //     else
-    //     {
-    //         _modulatorMovementActive = false;
-    //         if (CoordinateSystem.X.ChosenMessageType == "Note")
-    //             _midi.SendFinalNoteOffMessage(CoordinateSystem.X);            
-    //         if (CoordinateSystem.Y.ChosenMessageType == "Note")
-    //             _midi.SendFinalNoteOffMessage(CoordinateSystem.Y);            
-    //         if (CoordinateSystem.Z.ChosenMessageType == "Note")
-    //             _midi.SendFinalNoteOffMessage(CoordinateSystem.Z);
-    //         return false;
-    //     }
-    // }
-
-    //private static int _octave = 6; // TODO: verschieben
-
-    //private void SendMidiMessage(Axis axis) // TODO: Methode mur einmal für alle Achsen aufrufen
-    //{
-    //    if(axis.ChosenMessageType == "Note")
-    //    {
-    //        if (GetPitch(axis.Position) != axis.LastPlayedNote) //TODO: implement running status
-    //            SendNoteMessage(axis, axis.Position);
-    //    }
-    //    else // CC Message
-    //    {
-    //        PluginWrapper.SendCcMsg(axis.ChosenChannel, axis.Index, axis.Position);
-    //    }
-    //}
-
-    //private void SendNoteMessage(Axis axis, int positionOnAxis)
-    //{
-    //    PluginWrapper.SendNoteOff(axis.LastChosenChannel, axis.LastPlayedNote, DEFAULT_VELOCITY);
-    //    int pitch = GetPitch(positionOnAxis);
-    //    PluginWrapper.SendNoteOn(axis.ChosenChannel, pitch, DEFAULT_VELOCITY);
-    //    axis.LastPlayedNote = pitch; // TODO Update von Last Werten in Methode zu Axis auslagern Oder für allen nach Coordinatesystem
-    //    axis.LastChosenChannel = axis.ChosenChannel;
-    //}
-
-    //public int GetPitch(int posOnAxisInCoord) // TODO: Oktave beschränken auf MIDI Protokoll 
-    //{
-    //    float steplenght = 128 / 12;
-    //    int pitch = (int)(posOnAxisInCoord / steplenght);
-    //    int pitchAndOctave = pitch + (_octave * 12);
-    //    return (pitchAndOctave);
-    //}
 }

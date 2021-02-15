@@ -10,44 +10,50 @@
     "m_KnownPackagesForSerialization": [
         {
             "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 28304,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 1349,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 31916,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 7596,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 31483,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
             "name": "com.sec.android.app.launcher",
-            "processId": 1815,
+            "processId": 1773,
             "exited": false
         },
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 14437,
+            "processId": 5013,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 6556,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 6761,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 9026,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 10527,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.android.settings",
+            "processId": 16901,
+            "exited": false
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 12346,
             "exited": false
         },
         {

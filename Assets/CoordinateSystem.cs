@@ -63,14 +63,14 @@ public class CoordinateSystem : MonoBehaviour
 
     public void SetModulatorPosition(Vector3 modulatorPositionUnity)
     {
-      //var delta = GetDeltaToOrigin(modulatorPositionUnity);
-      //
-      //X.Position = (int)(delta.x * X.StepLenghtInUnity);
-      //Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
-      //Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
+      var delta = GetDeltaToOrigin(modulatorPositionUnity);
+      
+      X.Position = (int)(delta.x * X.StepLenghtInUnity);
+      Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
+      Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
     }
 
-    public Vector3 GetDeltaToOrigin(Vector3 modulatorPositionUnity)
+    private Vector3 GetDeltaToOrigin(Vector3 modulatorPositionUnity)
     {
         var origin = GetOrigin();
         var delta = transform.InverseTransformPoint(modulatorPositionUnity) -

@@ -44,9 +44,8 @@ public class MidiPlugin
         _mManager = (MidiManager)_unityContext.getSystemService(Context.MIDI_SERVICE);
 
         if(_mManager.getDevices().length > 0)
-        {
             EstablishConnection(_mManager.getDevices()[0]);
-        }
+
 
         _mManager.registerDeviceCallback(new MidiManager.DeviceCallback()
         {
@@ -82,6 +81,7 @@ public class MidiPlugin
     {
         if(_mInputPort != null)
             _mInputPort.close();
+
         if(_mDevice != null)
             _mDevice.close();
     }
@@ -94,11 +94,30 @@ public class MidiPlugin
         return new byte[] {statusByte, dataByte1, dataByte2};
     }
 
+    private byte CreateStatusByte(String messageType, int channel)
+    {
+        switch(messageType)
+        {
+            case "NoteOn":
+                return (byte)(NOTE_ON_STATUS + channel);
+            case "NoteOff":
+                return (byte)(NOTE_OFF_STATUS + channel);
+            default:
+                return (byte)(CC_STATUS + channel);
+        }
+    }
+
     private void SendMidiMessage(byte[] message)
     {
         try
         {
-            _mInputPort.send(message, 0, message.length);
+            if(_mInputPort != null)
+                _mInputPort.send(message, 0, message.length);
+            else
+            {
+                Log.i("MIDI PLUGIN", "InputPort is null");
+            }
+
             Log.i("MIDI PLUGIN", "StatusByte = "
                     + (int)message[0] + ", DataByte1 = "
                     + (int)message[1] + ", DataByte2 = "
@@ -115,18 +134,6 @@ public class MidiPlugin
         }
     }
 
-    private byte CreateStatusByte(String messageType, int channel)
-    {
-        switch(messageType)
-        {
-            case "NoteOn":
-                return (byte)(NOTE_ON_STATUS + channel);
-            case "NoteOff":
-                return (byte)(NOTE_OFF_STATUS + channel);
-            default:
-                return (byte)(CC_STATUS + channel);
-        }
-    }
 
     private void EstablishConnection(MidiDeviceInfo mDeviceInfo)
     {
