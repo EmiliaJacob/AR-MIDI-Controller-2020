@@ -1654,7 +1654,7 @@ MonoBehaviour:
   ModAndCoordParent: {fileID: 854905462}
   ArState: {fileID: 1980159960}
   TrackingInfos: {fileID: 1345564976}
-  MidiPluginWrapper: {fileID: 841075152}
+  Midi: {fileID: 841075152}
   CoordinateSystem: {fileID: 1577749884}
 --- !u!135 &302988620
 SphereCollider:
@@ -4608,7 +4608,7 @@ GameObject:
   - component: {fileID: 841075153}
   - component: {fileID: 841075152}
   m_Layer: 0
-  m_Name: MidiAdapter
+  m_Name: Midi
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4626,7 +4626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f6ef4bc423d124597a38b5c7f6d9ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Modulator: {fileID: 0}
+  Modulator: {fileID: 302988619}
 --- !u!4 &841075153
 Transform:
   m_ObjectHideFlags: 0
@@ -10403,7 +10403,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1972659965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 841075152}
+        m_MethodName: RouteAxis
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1972659965
 MonoBehaviour:
   m_ObjectHideFlags: 0

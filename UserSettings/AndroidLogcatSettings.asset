@@ -1,37 +1,13 @@
 {
-    "m_SelectedDeviceId": "2998162722047ece",
+    "m_SelectedDeviceId": "192.168.2.102:5555",
     "m_SelectedPackage": {
-        "deviceId": "",
-        "name": "",
-        "processId": 0,
+        "deviceId": "192.168.2.102:5555",
+        "name": "com.manomotion.arfoundationssdkceexample",
+        "processId": 18963,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.sec.android.app.launcher",
-            "processId": 1773,
-            "exited": false
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 5013,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 6556,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 6761,
-            "exited": true
-        },
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
@@ -48,37 +24,25 @@
             "deviceId": "2998162722047ece",
             "name": "com.android.settings",
             "processId": 16901,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 12346,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 28676,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 8998,
             "exited": false
-        },
-        {
-            "deviceId": "192.168.2.102:5555",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 2331,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.2.102:5555",
-            "name": "com.google.android.permissioncontroller",
-            "processId": 9873,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.2.102:5555",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 9816,
-            "exited": true
-        },
-        {
-            "deviceId": "192.168.2.102:5555",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 9857,
-            "exited": true
         },
         {
             "deviceId": "192.168.2.102:5555",
@@ -90,6 +54,30 @@
             "deviceId": "192.168.2.102:5555",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 23798,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.2.102:5555",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 28676,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.2.102:5555",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 8998,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.2.102:5555",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 13670,
+            "exited": true
+        },
+        {
+            "deviceId": "192.168.2.102:5555",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 18963,
             "exited": false
         }
     ],
@@ -101,7 +89,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "",
@@ -125,7 +113,7 @@
             },
             {
                 "m_Name": "MIDI PLUGIN",
-                "m_Selected": true
+                "m_Selected": false
             }
         ]
     },

@@ -4,19 +4,18 @@ using UnityEngine.UI;
 public class Modulator : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
-    private Midi _midi;
 
     public static bool DebugMode = false;
     public Vector3 OriginInWorld; 
     public GameObject ModAndCoordParent;
     public ArState ArState;
     public HandTrackingInfo TrackingInfos;
-    public MidiPluginWrapper MidiPluginWrapper;
+    public Midi Midi;
     public CoordinateSystem CoordinateSystem;
     
     void Start()
     {
-        _midi = new Midi(MidiPluginWrapper);
+        //_midi = new Midi(Midi);
     }
 
     void Update()
@@ -27,9 +26,9 @@ public class Modulator : MonoBehaviour
             {
                 CoordinateSystem.SetModulatorPosition(transform.position);
                 CoordinateSystem.UpdateCoordinateUi();
-                _midi.SendMidiMessage(CoordinateSystem.X);
-                _midi.SendMidiMessage(CoordinateSystem.Y);
-                _midi.SendMidiMessage(CoordinateSystem.Z);
+                Midi.SendMidiMessage(CoordinateSystem.X);
+                Midi.SendMidiMessage(CoordinateSystem.Y);
+                Midi.SendMidiMessage(CoordinateSystem.Z);
 
                 if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
                 {
@@ -44,11 +43,11 @@ public class Modulator : MonoBehaviour
                 {
                     _modulatorMovementActive = false;
                     if (CoordinateSystem.X.ChosenMessageType == "Note")
-                        _midi.SendFinalNoteOffMessage(CoordinateSystem.X);
+                        Midi.SendFinalNoteOffMessage(CoordinateSystem.X);
                     if (CoordinateSystem.Y.ChosenMessageType == "Note")
-                        _midi.SendFinalNoteOffMessage(CoordinateSystem.Y);
+                        Midi.SendFinalNoteOffMessage(CoordinateSystem.Y);
                     if (CoordinateSystem.Z.ChosenMessageType == "Note")
-                        _midi.SendFinalNoteOffMessage(CoordinateSystem.Z);
+                        Midi.SendFinalNoteOffMessage(CoordinateSystem.Z);
                 }
             }
         }
@@ -118,11 +117,11 @@ public class Modulator : MonoBehaviour
     private void DebugModeSendNoteFinalNoteOffs()
     {
         if (CoordinateSystem.X.ChosenMessageType == "Note")
-            MidiPluginWrapper.SendNoteOff(CoordinateSystem.X);
+            Midi.SendFinalNoteOffMessage(CoordinateSystem.X);
         if (CoordinateSystem.Y.ChosenMessageType == "Note")
-            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Y);
+            Midi.SendFinalNoteOffMessage(CoordinateSystem.Y);
         if (CoordinateSystem.Z.ChosenMessageType == "Note")
-            MidiPluginWrapper.SendNoteOff(CoordinateSystem.Z);
+            Midi.SendFinalNoteOffMessage(CoordinateSystem.Z);
     }
 
     private void DebugModeSendMidiMessage(Axis axis)
@@ -130,11 +129,11 @@ public class Modulator : MonoBehaviour
         switch (axis.ChosenMessageType)
         {
             case "Note":
-                if (_midi.GetPitch(axis) != axis.LastPlayedNote) //TODO: implement running status
+                if (Midi.GetPitch(axis) != axis.LastPlayedNote) //TODO: implement running status
                 {
                     //PluginWrapper.SendNoteOff(axis.LastPlayedNote, _lastChannel[axis]);
                     Debug.Log($"{axis} Off || pitch: {axis.LastPlayedNote} || channel: {axis.LastChosenChannel}");
-                    int pitch = _midi.GetPitch(axis);
+                    int pitch = Midi.GetPitch(axis);
                     //PluginWrapper.SendNoteOn(pitch, DEFAULT_VELOCITY, GetChannel(axis) - 1);
                     Debug.Log($"{axis} On || pitch: {pitch} || channel: {axis.ChosenChannel}");
                     axis.LastPlayedNote = pitch;
