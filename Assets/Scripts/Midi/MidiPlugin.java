@@ -57,7 +57,7 @@ public class MidiPlugin
 
             public void onDeviceRemoved(MidiDeviceInfo info)
             {
-                Log.i("MIDI PLUGIN", "Device removed");
+                Log.i("MIDI PLUGIN", "Unplugged");
                 _readyToSendMsg = false;
                 try
                 {
@@ -84,6 +84,8 @@ public class MidiPlugin
 
         if(_mDevice != null)
             _mDevice.close();
+
+        Log.i("MIDI PLUGIN", "InputPort and Device are closed");
     }
 
     private byte[] CreateMidiMessage(String messsageType, int channel, int data1, int data2)
