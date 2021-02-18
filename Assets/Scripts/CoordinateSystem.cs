@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class CoordinateSystem : MonoBehaviour
 {
-    private Mesh _meshCoordinateSystem;
-    private Renderer _rendererCoordinateSystem;
+    private Mesh _meshCoordinateSystem 
+    { 
+        get {return GetComponent<MeshFilter>().mesh;}
+    }
+
+    private Renderer _rendererCoordinateSystem 
+    { 
+        get {return GetComponent<Renderer>();}
+    }
 
     public Dropdown MessageTypeX;
     public Dropdown MessageTypeY;
@@ -22,10 +29,11 @@ public class CoordinateSystem : MonoBehaviour
 
     void Start()
     {
-        _meshCoordinateSystem = GetComponent<MeshFilter>().mesh;
-        _rendererCoordinateSystem = GetComponent<Renderer>();
-
+        //_meshCoordinateSystem = GetComponent<MeshFilter>().mesh;
+        //_rendererCoordinateSystem = GetComponent<Renderer>();
+        //
         SetupAxes();
+        //SetToInitialPosition();
     }
 
     private void SetupAxes()
@@ -53,15 +61,17 @@ public class CoordinateSystem : MonoBehaviour
         Z.SetStepLenghtUnity(AxesLenghtUnity.z);
     }
 
-    public Vector3 GetOrigin()
-    { 
+    public Vector3 GetOrigin() //TODO: weshalb nicht gleich mit Renderer?
+    {
         var origin = transform.TransformPoint(
             _meshCoordinateSystem.bounds.min + new Vector3(
             _meshCoordinateSystem.bounds.size.x, 0, 0));
+        //var origin = _rendererCoordinateSystem.bounds.min + new Vector3(
+        //             _rendererCoordinateSystem.bounds.size.x, 0, 0);
         return origin;
     }
 
-    public void SetModulatorPosition(Vector3 modulatorPositionUnity)
+    public void SetModulatorPosition(Vector3 modulatorPositionUnity) //TODO: renamen
     {
       var delta = GetDeltaToOrigin(modulatorPositionUnity);
       

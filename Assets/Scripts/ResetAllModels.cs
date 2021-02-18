@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetEverythingScript : MonoBehaviour
+public class ResetAllModels : MonoBehaviour
 {
     public GameObject ModulatorAndCoordinates;
     public GameObject Modulator;
     public GameObject Coordinates;
 
-    public void ResetEverything()//TODO: Rename 
+    public void DoIt()//TODO: Rename 
     {
         ModulatorAndCoordinates.transform.position = Camera.main.transform.position + (Camera.main.transform.forward);
         Vector3 lookTarget = new Vector3(Camera.main.transform.position.x,

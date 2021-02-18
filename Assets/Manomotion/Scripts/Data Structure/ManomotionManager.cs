@@ -593,14 +593,14 @@ public class ManomotionManager : ManomotionBase
 
     protected override void Init(string serial_key)
     {
-#if !UNITY_EDITOR || UNITY_STANDALONE
-#endif
-        _manoLicense = init(_manoSettings);
-        initialized = true;
-
-        if (OnManoMotionLicenseInitialized != null)
-        {
-            OnManoMotionLicenseInitialized();
-        }
+//#if !UNITY_EDITOR || UNITY_STANDALONE
+//#endif
+//        _manoLicense = init(_manoSettings);
+//        initialized = true;
+//
+//        if (OnManoMotionLicenseInitialized != null)
+//        {
+//            OnManoMotionLicenseInitialized();
+//        }
     }
 }

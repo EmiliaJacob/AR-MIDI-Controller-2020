@@ -5,17 +5,18 @@ public class Modulator : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
 
-    public static bool DebugMode = false;
+    public static bool DebugMode = true;
     public Vector3 OriginInWorld; 
     public GameObject ModAndCoordParent;
-    public ArState ArState;
-    public HandTrackingInfo TrackingInfos;
+    public GameObject HandObject;
+    //public ArState ArState;
+    //public HandTrackingInfo TrackingInfos;
     public Midi Midi;
     public CoordinateSystem CoordinateSystem;
     
     void Start()
     {
-        
+        //SetToOrigin();
     }
 
     void Update()
@@ -30,9 +31,9 @@ public class Modulator : MonoBehaviour
                 Midi.SendMidiMessage(CoordinateSystem.Y);
                 Midi.SendMidiMessage(CoordinateSystem.Z);
 
-                if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
+                if (HandTrackingInfo.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE)
                 {
-                    FollowHand();
+                    transform.position = HandObject.transform.position;
 
                     if (CoordinateSystem.CheckIfModulatorInBoundaries(transform.position) == false)
                     {
@@ -61,14 +62,6 @@ public class Modulator : MonoBehaviour
        // UiPosMod.text = $"x: {newPosInCoord.x}, y: {newPosInCoord.y}, z: {newPosInCoord.z}"; //TODO: verschieben
     }
 
-    private void FollowHand()
-    {
-        var calculatedPos = ManoUtils.Instance.CalculateNewPosition(TrackingInfos.PalmCenterPosition,
-                TrackingInfos.Depth);
-
-        transform.position = calculatedPos;
-    }
-
     private void OnTriggerEnter(Collider collider) 
     {
         //collider.gameObject.transform.position = transform.position;
@@ -79,7 +72,7 @@ public class Modulator : MonoBehaviour
     {
       if(_modulatorMovementActive == false)
       {
-          if (TrackingInfos.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE) 
+          if (HandTrackingInfo.Gesture == ManoGestureContinuous.CLOSED_HAND_GESTURE) 
           {
               _modulatorMovementActive = true;
           }
@@ -150,3 +143,12 @@ public class Modulator : MonoBehaviour
         }
     }
 }
+
+// private void FollowHand()
+// {
+//     var calculatedPos = ManoUtils.Instance.CalculateNewPosition(HandTrackingInfo.PalmCenterPosition,
+//             HandTrackingInfo.Depth);
+//
+//     transform.position = calculatedPos;
+// }
+//

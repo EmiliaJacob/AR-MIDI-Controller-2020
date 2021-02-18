@@ -2,8 +2,8 @@
 
 public class FollowHand : MonoBehaviour
 {
-    public ArState ArState;
-    public HandTrackingInfo TrackingInfo;
+    //public ArState ArState;
+    //public HandTrackingInfo TrackingInfo;
 
     void Start()
     {
@@ -20,6 +20,6 @@ public class FollowHand : MonoBehaviour
 
     private void TrackMovement()
     {
-        transform.position = ManoUtils.Instance.CalculateNewPosition(TrackingInfo.PalmCenterPosition, TrackingInfo.Depth);
+        transform.position = ManoUtils.Instance.CalculateNewPosition(HandTrackingInfo.PalmCenterPosition, HandTrackingInfo.Depth);
     }
 }

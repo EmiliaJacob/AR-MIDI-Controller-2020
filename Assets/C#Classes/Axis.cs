@@ -7,7 +7,7 @@ public class Axis
 
     public int Index { get; }
     public int Position;
-    public int StepResolution;
+    public int StepResolution; // TODO: vlllt renamen. Ist der Begriff Resolution angemessen?
     public float StepLenghtInUnity;
     public int LastPlayedNote;
     public int LastChosenChannel;

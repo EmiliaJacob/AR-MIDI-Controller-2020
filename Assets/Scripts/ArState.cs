@@ -1,16 +1,19 @@
 ﻿using UnityEngine;
 using UnityEngine.XR.ARFoundation;
 
-public class ArState : MonoBehaviour
+public class ArState 
 {
-    public bool TrackingStateActive = false;
+    public static bool TrackingStateActive = false;
 
     void Start()
     {
         ARSession.stateChanged += CheckForTrackingState; 
     }
-
-    private void CheckForTrackingState(ARSessionStateChangedEventArgs args)
+    static ArState()
+    {
+        ARSession.stateChanged += CheckForTrackingState;
+    }
+    private static void CheckForTrackingState(ARSessionStateChangedEventArgs args) // TODO: Attribut durch Funktion ablösen
     {
         if (args.state == ARSessionState.SessionTracking)
         {

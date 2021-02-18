@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class Midi : MonoBehaviour 
@@ -18,16 +16,18 @@ public class Midi : MonoBehaviour
     {
         _unityAndroidClass =  new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         _midiPlugin = new AndroidJavaObject("com.example.midiplugin.MidiPlugin");
-        bool midiSupported = _midiPlugin.Call<bool>("UnityCheckForMidiSupport", GetContext());
-        
-        if(midiSupported)
-        {
-            MidiNotSupportedPosition.enabled = false;
-            MidiNotSupportedAxes.enabled = false;
-        }
-
         if(Modulator.DebugMode == false)
+        {
+            bool midiSupported = _midiPlugin.Call<bool>("UnityCheckForMidiSupport", GetContext());
+        
+            if(midiSupported)
+            {
+                MidiNotSupportedPosition.enabled = false;
+                MidiNotSupportedAxes.enabled = false;
+            }
+
             _midiPlugin.Call("UnitySetupPlugin", GetContext());
+        }
     }
 
     private AndroidJavaObject GetContext()
