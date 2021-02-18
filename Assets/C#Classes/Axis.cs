@@ -10,7 +10,7 @@ public class Axis
     public int StepResolution;
     public float StepLenghtInUnity;
     public int LastPlayedNote;
-    public int LastChosenChannel; // TODO: vllt zu midi verschieben
+    public int LastChosenChannel;
 
     public string ChosenMessageType
     {

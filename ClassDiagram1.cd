@@ -1,0 +1,592 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Midi">
+    <Position X="0.5" Y="0.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAAEBAAIACYIAABAAIAAAAADACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Midi\Midi.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Axis">
+    <Position X="4" Y="0.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AkAAAACAAAAQQAAgCABAJAAAAAAAAAAAAAEBAACAAAA=</HashCode>
+      <FileName>Assets\C#Classes\Axis.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Modulator">
+    <Position X="6.75" Y="0.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAYAEABMACBAAhAQAAAAAAAAAAAAAIAAQAEAgIgAACA=</HashCode>
+      <FileName>Assets\Scripts\Models\Modulator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DeviceCallback" Collapsed="true">
+    <Position X="18" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\C#Classes\DeviceCallback.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoordinateSystem" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQgAAYAACAGACAAAIDAAEACABAAAACAAAAAAAAAYAE=</HashCode>
+      <FileName>Assets\CoordinateSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DebugLogPanel" Collapsed="true">
+    <Position X="16.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAGAAAAEAAAAAAAAAACAgAAAAIJAAABAAAAGAA=</HashCode>
+      <FileName>Assets\DebugXR, by Tobiesen\Scripts\DebugLogPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandTracking" Collapsed="true">
+    <Position X="21.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAZAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\HandTracking.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DetectionInstruction" Collapsed="true">
+    <Position X="3.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACAFAAAAAAAEAAAAAAAAAAAAAAAAAAQAAQAIACAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\DetectionInstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GestureInstruction" Collapsed="true">
+    <Position X="6" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQACABAAAQBAQEAAAAkAAgAAgABAIAAIQAAEAIAGAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TriggerGestureToPerformInstruction" Collapsed="true">
+    <Position X="19.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\GestureInstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandSideInstruction" Collapsed="true">
+    <Position X="8" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQCCABAAAEAAAEAEAAAAAAAAAAAAAAAAQAAAAAQGAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\HandSideInstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Instruction" Collapsed="true">
+    <Position X="4" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAgiABAIAiAAAMAAAYAAAAAAAAQAiAACAQRQioAQAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\Instruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InstructionVisualization" Collapsed="true">
+    <Position X="18" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\InstructionVisualization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartApplicationInstruction" Collapsed="true">
+    <Position X="1.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAQAAAAAACAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Instructions\StartApplicationInstruction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplicationManager" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAEAACAEEAAAgAAAAAAAAAAAAAAAYAAABAAgAEA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Scripts\ApplicationManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HowToAnimations" Collapsed="true">
+    <Position X="12.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EABACQBAAQAAQAAAABwAABAgEQAAABhIAlAAICCAAAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Scripts\HowToAnimations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InstructionManoVisualization" Collapsed="true">
+    <Position X="5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Scripts\InstructionManoVisualization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CubeGameManager" Collapsed="true">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIEAAAAACAAAIEBABAAAAAAACAQAQACSAgAECAAAEA=</HashCode>
+      <FileName>Assets\Manomotion\Examples\Blocks\Scripts\CubeGameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CubeSpawn" Collapsed="true">
+    <Position X="14.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIAAAAAAAQAIAAAAAACACAAAAAACAAAAAAACAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Examples\Blocks\Scripts\CubeSpawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpawnPoint" Collapsed="true">
+    <Position X="12.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAQAQAAAACAUIAAAAAAAAAAAAAAAQAEAAAAAAgAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Examples\Blocks\Scripts\SpawnPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExampleDetectionEdges" Collapsed="true">
+    <Position X="21.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAAAAACCAAEAAQAAAAAAAAAAABIABAAAEAAAAAAQ=</HashCode>
+      <FileName>Assets\Manomotion\Examples\Detection\Scripts\ExampleDetectionEdges.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExampleSpooky" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACACAAAACCAAAAAAAGAAAAAAAAABAAAAoAAAAAAEAE=</HashCode>
+      <FileName>Assets\Manomotion\Examples\Spooky\Scripts\ExampleSpooky.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManagerBaseClass" Collapsed="true">
+    <Position X="1.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAACAFCAAAAAAAAAAQAEAAQAAEQAAAAAAAgAAAEAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\InputManagerBaseClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManagerPhoneCamera" Collapsed="true">
+    <Position X="3" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAAAACSAAAAAAAAAgAJAAAEAAQBAIAABAAAAAKEg=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\InputManagerPhoneCamera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManomotionBase" Collapsed="true">
+    <Position X="6.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAEgkACAAAAAAAAACAAAACAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManomotionBase.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManomotionManager" Collapsed="true">
+    <Position X="8.75" Y="6.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>CgQIADFgBjgMAACIIQEAQEgmEmFggBMFQZpDkAARrME=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManomotionManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GizmoManager" Collapsed="true">
+    <Position X="14.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>agE/AiDABCBhK0ggVlGEOoQTIoQAYYgDQABASApBEY0=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Gizmos\GizmoManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TriggerGizmo" Collapsed="true">
+    <Position X="21.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAhgAAAAAAAAAAADAAJAAAAAgAAAgEBBAACEA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Gizmos\TriggerGizmo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Category" Collapsed="true">
+    <Position X="19.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAAAAAAEIKAAIBAAQQAIoAgAACgCgDAAAAgEAAAAAEA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\Category.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CategoryManager" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACBAAACBAAAAQAAAAQAAQAABAAAAAQAAAAAACgEA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\CategoryManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IconMainMenu" Collapsed="true">
+    <Position X="16.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAEACAIAAAAAAAAAAAAAAAAAAAAAAAAAAACCAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\IconMainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManomotionUIManagment" Collapsed="true">
+    <Position X="21.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAACAAAACAAEACAAAAARAAAABAAAAAQAAiICIAEA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\ManomotionUIManagment.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MenuButton" Collapsed="true">
+    <Position X="12.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACBAEAAAAAAAAIBAAAAAAAAAAAYBAAEACAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\MenuButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToggleGizmos" Collapsed="true">
+    <Position X="16.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAgABCQCAAgQAAAAAAQAAAAAACAAAAIAAAiAAJg=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\ToggleGizmos.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BoundingBoxUI" Collapsed="true">
+    <Position X="16.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAGAAACQKQAABBAAAQEgAAAAAQAAAAAACBAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\ManoVisualization\BoundingBoxUI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoVisualization" Collapsed="true">
+    <Position X="5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgCBBAAAACAhAggAiCACAAIAEIAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\ManoVisualization\ManoVisualization.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToggleVisualizationValues" Collapsed="true">
+    <Position X="18" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAgAAACAAAAAAAAAAAAAAAAAACAAAAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\ManoVisualization\ToggleVisualizationValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoEvents" Collapsed="true">
+    <Position X="19.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEQAAAAAAAAAAAAIAEAAAACAAAAAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Util Tools\ManoEvents.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoUtils" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAEACAIAAQQAAQAgAAAAABEAACA4AAAAAACAEA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Util Tools\ManoUtils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BWEffect" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAEAAAAAAABAAEA=</HashCode>
+      <FileName>Assets\Manomotion\UIBlurEffect\Scripts\BWEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrabPass" Collapsed="true">
+    <Position X="16.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAACAAAAAAAAAAAAAAAAAACAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Manomotion\UIBlurEffect\Scripts\GrabPass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Grayscale" Collapsed="true">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAABAAEA=</HashCode>
+      <FileName>Assets\Manomotion\UIBlurEffect\Scripts\Grayscale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ARCubeInteraction" Collapsed="true">
+    <Position X="12.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAQACCAAARAAAAAAAAAAAGAAAMAAQABSAABAAAA=</HashCode>
+      <FileName>Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\ARCubeInteraction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandCollider" Collapsed="true">
+    <Position X="19.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAAACAAAAAAAAAAAAACAAAAAAAAQAAAAAAAACA=</HashCode>
+      <FileName>Assets\ManoMotion ARFoundation\Examples\Inetraction\Scripts\HandCollider.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ExampleDetectionCanvas" Collapsed="true">
+    <Position X="19.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAACgAAAAIAAAAAgAAAAAAAAAAQAAgAAFAAAA=</HashCode>
+      <FileName>Assets\ManoMotion ARFoundation\Scripts\ExampleDetectionCanvas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InputManagerArFoundation" Collapsed="true">
+    <Position X="0.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQEAABAFiCAAAAAAAEAAIQAAAAAAABAEAABQAAAAdEA=</HashCode>
+      <FileName>Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RouteAxisForCc" Collapsed="true">
+    <Position X="19.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\RouteAxisForCc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ArState" Collapsed="true">
+    <Position X="14.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ArState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FollowHand" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\FollowHand.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandTrackingInfo" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAgAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\HandTrackingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SetInitialPostion" Collapsed="true">
+    <Position X="11" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Models\SetInitialPostion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResetEverythingScript" Collapsed="true">
+    <Position X="16.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAJIAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ui\ResetEverythingScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ResetModulatorPositionScript" Collapsed="true">
+    <Position X="18" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ui\ResetModulatorPositionScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ToggleDebugMode" Collapsed="true">
+    <Position X="14.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ui\ToggleDebugMode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UiSwipe" Collapsed="true">
+    <Position X="12.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAQAAAAIAAAAAAABAAQAAAAAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Ui\UiSwipe.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZoomModelOut" Collapsed="true">
+    <Position X="14.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ui\ZoomModelOut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ZoomModelsIn" Collapsed="true">
+    <Position X="16.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Ui\ZoomModelsIn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoMotion.HowToUse.HowToInstructor" Collapsed="true">
+    <Position X="14.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AI0AQChAISCAgSAACECACAMEAAAgECAoDADgACAAD0A=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoMotion.RunTime.RunTimeApplication" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAiIBCBGBgAIKDACEgAQBwOJIAAMAlRgGAFcCAIYg=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Scripts\RunTimeApplication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoMotion.TermsAndServices.PrivacyPolicyDisclaimair" Collapsed="true">
+    <Position X="14.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAgAAAAgAAAIACAQAAQAAAIAAAAAACAABAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\PrivacyPolicyDisclaimair.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManoMotion.UI.Buttons.UIIconBehavior" Collapsed="true">
+    <Position X="11" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAACAAAICAAAAAAAgIAIBAAAAAAABBACQAAAACACAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\MainMenu\UIIconBehavior.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="GestureInfo" Collapsed="true">
+    <Position X="14.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACEAAAAAAAAAEAAgQAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\GestureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="HandInfo" Collapsed="true">
+    <Position X="16.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAggAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\HandInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="HandInfoUnity" Collapsed="true">
+    <Position X="18" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\HandInfoUnity.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ManoLicense" Collapsed="true">
+    <Position X="19.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAIACABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManoLicense.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ManoMotionFrame" Collapsed="true">
+    <Position X="21.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAUAQAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManoMotionFrame.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ManoSettings" Collapsed="true">
+    <Position X="11" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAIAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManoSettings.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Session" Collapsed="true">
+    <Position X="12.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAUgAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\Session.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Features" Collapsed="true">
+    <Position X="12.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\Session.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="TrackingInfo" Collapsed="true">
+    <Position X="14.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAACAAAAIAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\TrackingInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="VisualizationInfo" Collapsed="true">
+    <Position X="16.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\VisualizationInfo.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="BoundingBox" Collapsed="true">
+    <Position X="11" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAQAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\ManoVisualization\BoundingBox.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="ManoClass" Collapsed="true">
+    <Position X="11" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAABAAAAAAAAAAACAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\GestureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="HandSide" Collapsed="true">
+    <Position X="16.25" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAABAAAAAAAEAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\GestureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManoGestureTrigger" Collapsed="true">
+    <Position X="14.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAAAAAIAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\GestureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManoGestureContinuous" Collapsed="true">
+    <Position X="12.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAKAACAAAAAQAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\GestureInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Warning" Collapsed="true">
+    <Position X="18" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAIIAEAAAAAAAAABAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\HandInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Hand" Collapsed="true">
+    <Position X="14.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\HandInfo.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="LicenseAnswer" Collapsed="true">
+    <Position X="21.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACABAAACAAAACAAAAACgQAAAAABCAgEAAAEAAAIAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManoLicense.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Platform" Collapsed="true">
+    <Position X="16.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManoSettings.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ImageFormat" Collapsed="true">
+    <Position X="18" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAACAIIA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\ManoSettings.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AddOn" Collapsed="true">
+    <Position X="11" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAAAAACgAAAAAAAAAhAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\Session.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Flags" Collapsed="true">
+    <Position X="12.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\Scripts\Data Structure\Session.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="ManoMotion.HowToUse.InstructionsState" Collapsed="true">
+    <Position X="19.75" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Manomotion\ApplicationIntro\Scripts\HowToInstructor.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -15,7 +15,7 @@ public class Modulator : MonoBehaviour
     
     void Start()
     {
-        //_midi = new Midi(Midi);
+        
     }
 
     void Update()

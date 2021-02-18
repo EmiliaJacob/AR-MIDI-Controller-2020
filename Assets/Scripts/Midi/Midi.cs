@@ -3,20 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Midi : MonoBehaviour // TODO: Muss es Skript sein? 
+public class Midi : MonoBehaviour 
 {
     private int _octave = 6;
     private AndroidJavaClass _unityAndroidClass;
     private AndroidJavaObject _midiPlugin;
 
     public const int DEFAULT_VELOCITY = 120;
-    public Modulator Modulator; // TODO: Cross referenz entfernen
+    public Modulator Modulator; 
+    public Text MidiNotSupportedPosition;
+    public Text MidiNotSupportedAxes;
 
     void Start()
     {
         _unityAndroidClass =  new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         _midiPlugin = new AndroidJavaObject("com.example.midiplugin.MidiPlugin");
-        //TODO: Kompatibilitätscheck hinzufügen
+        bool midiSupported = _midiPlugin.Call<bool>("UnityCheckForMidiSupport", GetContext());
+        
+        if(midiSupported)
+        {
+            MidiNotSupportedPosition.enabled = false;
+            MidiNotSupportedAxes.enabled = false;
+        }
+
         if(Modulator.DebugMode == false)
             _midiPlugin.Call("UnitySetupPlugin", GetContext());
     }
@@ -70,7 +79,7 @@ public class Midi : MonoBehaviour // TODO: Muss es Skript sein?
     
    public void RouteAxis(int axisIndex) // TODO: Anpassen
    {
-        switch(axisIndex)
+        switch (axisIndex)
         {
             case 0:
                 _midiPlugin.Call("UnitySendMidiMessage", "Cc", Modulator.CoordinateSystem.X.ChosenChannel, Modulator.CoordinateSystem.X.Index, 0);
