@@ -16,7 +16,7 @@ public class MidiPlugin
     private MidiManager _mManager;
     private MidiDevice _mDevice;
     private MidiInputPort _mInputPort;
-    private boolean _readyToSendMsg;
+    private boolean _connected;
 
     private static final int NOTE_ON_STATUS = 144;
     private static final int NOTE_OFF_STATUS = 128;
@@ -39,7 +39,7 @@ public class MidiPlugin
 
     public void UnitySetupPlugin(Context unityContext)
     {
-        _readyToSendMsg = false;
+        _connected = false;
         _unityContext = unityContext;
         _mManager = (MidiManager)_unityContext.getSystemService(Context.MIDI_SERVICE);
 
@@ -58,7 +58,7 @@ public class MidiPlugin
             public void onDeviceRemoved(MidiDeviceInfo info)
             {
                 Log.i("MIDI PLUGIN", "Unplugged");
-                _readyToSendMsg = false;
+                _connected = false;
                 try
                 {
                     Close();
@@ -75,6 +75,11 @@ public class MidiPlugin
     {
         byte [] message = CreateMidiMessage(messageType, channel, data1, data2);
         SendMidiMessage(message);
+    }
+
+    public boolean UnityCheckForConnectionStatus()
+    {
+        return _connected;
     }
 
     private void Close() throws IOException
@@ -170,7 +175,7 @@ public class MidiPlugin
             {
                 _mInputPort = mInputPort;
                 Log.i("MIDI PLUGIN", "Inputport opened");
-                _readyToSendMsg = true;
+                _connected = true;
                 return;
             }
         }

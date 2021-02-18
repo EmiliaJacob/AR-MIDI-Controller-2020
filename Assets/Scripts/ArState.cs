@@ -7,7 +7,7 @@ public class ArState : MonoBehaviour
 
     void Start()
     {
-        ARSession.stateChanged += CheckForTrackingState; // TODO: Move this into it's own class
+        ARSession.stateChanged += CheckForTrackingState; 
     }
 
     private void CheckForTrackingState(ARSessionStateChangedEventArgs args)
