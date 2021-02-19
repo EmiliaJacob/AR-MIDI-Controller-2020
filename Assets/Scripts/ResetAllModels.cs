@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class ResetAllModels : MonoBehaviour
 {
-    public GameObject ModulatorAndCoordinates;
-    public GameObject Modulator;
-    public GameObject Coordinates;
+    public GameObject ModulatorAndCoordinateParentObject;
+    public GameObject ModulatorObject;
+    public GameObject CoordinateObject;
 
     public void DoIt()//TODO: Rename 
     {
-        ModulatorAndCoordinates.transform.position = Camera.main.transform.position + (Camera.main.transform.forward);
+        ModulatorAndCoordinateParentObject.transform.position = Camera.main.transform.position + (Camera.main.transform.forward);
         Vector3 lookTarget = new Vector3(Camera.main.transform.position.x,
-                                         ModulatorAndCoordinates.transform.position.y,
+                                         ModulatorAndCoordinateParentObject.transform.position.y,
                                          Camera.main.transform.position.z);
-        ModulatorAndCoordinates.transform.LookAt(lookTarget);
+        ModulatorAndCoordinateParentObject.transform.LookAt(lookTarget);
 
-        var meshOfCoordObj = Coordinates.GetComponent<MeshFilter>().mesh;
-        var newNullPosMod = Coordinates.transform.TransformPoint(
+        var meshOfCoordObj = CoordinateObject.GetComponent<MeshFilter>().mesh;
+        var newNullPosMod = CoordinateObject.transform.TransformPoint(
             meshOfCoordObj.bounds.min + new Vector3(
             meshOfCoordObj.bounds.size.x, 0, 0));
-        Modulator.GetComponent<Modulator>().OriginInWorld = newNullPosMod;
+        ModulatorObject.GetComponent<Modulator>().OriginInWorld = newNullPosMod;
     }
 }

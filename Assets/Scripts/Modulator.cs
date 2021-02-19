@@ -7,7 +7,7 @@ public class Modulator : MonoBehaviour
 
     public static bool DebugMode = true;
     public Vector3 OriginInWorld; 
-    public GameObject ModAndCoordParent;
+    public GameObject ParentObject;
     public GameObject HandObject;
     //public ArState ArState;
     //public HandTrackingInfo TrackingInfos;
@@ -25,8 +25,8 @@ public class Modulator : MonoBehaviour
         {
             if (_modulatorMovementActive)
             {
-                CoordinateSystem.SetModulatorPosition(transform.position);
-                CoordinateSystem.UpdateCoordinateUi();
+                CoordinateSystem.SetAxesPositionOfModulator(transform.position);
+                CoordinateSystem.UpdateModulatorPositionUi();
                 Midi.SendMidiMessage(CoordinateSystem.X);
                 Midi.SendMidiMessage(CoordinateSystem.Y);
                 Midi.SendMidiMessage(CoordinateSystem.Z);
@@ -100,7 +100,7 @@ public class Modulator : MonoBehaviour
             transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
         }
 
-        CoordinateSystem.SetModulatorPosition(transform.position);
+        CoordinateSystem.SetAxesPositionOfModulator(transform.position);
        // UiPosMod.text = $"x: {modulatorPosition.x}, y: {modulatorPosition.y}, z: {modulatorPosition.z}";
         DebugModeSendMidiMessage(CoordinateSystem.X);
         DebugModeSendMidiMessage(CoordinateSystem.Y);

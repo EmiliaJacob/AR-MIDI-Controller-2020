@@ -21,7 +21,7 @@ public class CoordinateSystem : MonoBehaviour
     public Dropdown ChannelX;
     public Dropdown ChannelY;
     public Dropdown ChannelZ;
-    public Text CoordinateUi;
+    public Text ModulatorPositionUi;
 
     public Axis X;
     public Axis Y;
@@ -71,7 +71,7 @@ public class CoordinateSystem : MonoBehaviour
         return origin;
     }
 
-    public void SetModulatorPosition(Vector3 modulatorPositionUnity) //TODO: renamen
+    public void SetAxesPositionOfModulator(Vector3 modulatorPositionUnity) //TODO: renamen
     {
       var delta = GetDeltaToOrigin(modulatorPositionUnity);
       
@@ -88,9 +88,9 @@ public class CoordinateSystem : MonoBehaviour
         return delta;
     }
 
-    public void UpdateCoordinateUi()
+    public void UpdateModulatorPositionUi()
     {
-        CoordinateUi.text = $"x: {X.Position}, y: {Y.Position}, z: {Z.Position}";
+        ModulatorPositionUi.text = $"x: {X.Position}, y: {Y.Position}, z: {Z.Position}";
     }
 
     public bool CheckIfModulatorInBoundaries(Vector3 modulatorPosition)
@@ -107,12 +107,12 @@ public class CoordinateSystem : MonoBehaviour
         return closestPoint;
     }
 
-    public void UpdatePosition(int x, int y, int z)
-    {
-        X.Position = x;
-        Y.Position = y;
-        Z.Position = z;
-    }
+   //public void UpdatePosition(int x, int y, int z)
+   //{
+   //    X.Position = x;
+   //    Y.Position = y;
+   //    Z.Position = z;
+   //}
 
     void Update()
     {

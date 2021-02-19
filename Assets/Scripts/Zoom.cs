@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Zoom : MonoBehaviour
 {
-    public GameObject ModulatorAndCoordinates;
+    public GameObject ModulatorAndCoordinatesParentObject;
 
     public void DoIt(string direction)
     {
@@ -16,8 +16,8 @@ public class Zoom : MonoBehaviour
             difference = -0.2f;
 
         var cameraPos = Camera.main.transform.position;
-        var newPos = new Vector3(cameraPos.x, ModulatorAndCoordinates.transform.position.y, cameraPos.z);
+        var newPos = new Vector3(cameraPos.x, ModulatorAndCoordinatesParentObject.transform.position.y, cameraPos.z);
 
-        ModulatorAndCoordinates.transform.position = Vector3.MoveTowards(ModulatorAndCoordinates.transform.position, newPos, difference);
+        ModulatorAndCoordinatesParentObject.transform.position = Vector3.MoveTowards(ModulatorAndCoordinatesParentObject.transform.position, newPos, difference);
     }
 }
