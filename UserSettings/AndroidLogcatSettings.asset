@@ -3,35 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "2998162722047ece",
         "name": "com.manomotion.arfoundationssdkceexample",
-        "processId": 25637,
+        "processId": 3742,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.android.settings",
-            "processId": 16901,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 12346,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 28676,
-            "exited": true
-        },
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 8998,
-            "exited": true
-        },
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
@@ -42,12 +18,36 @@
             "deviceId": "2998162722047ece",
             "name": "com.sec.android.app.launcher",
             "processId": 1791,
-            "exited": false
+            "exited": true
         },
         {
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 25637,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 2098,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 2226,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.sec.android.app.launcher",
+            "processId": 1867,
+            "exited": false
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 3742,
             "exited": false
         },
         {
@@ -95,7 +95,7 @@
             },
             {
                 "m_Name": "No Filter",
-                "m_Selected": false
+                "m_Selected": true
             },
             {
                 "m_Name": "",
@@ -119,7 +119,7 @@
             },
             {
                 "m_Name": "MIDI PLUGIN",
-                "m_Selected": true
+                "m_Selected": false
             }
         ]
     },

@@ -10,16 +10,17 @@ public class ResetAllModels : MonoBehaviour
 
     public void DoIt()//TODO: Rename 
     {
-        ModulatorAndCoordinateParentObject.transform.position = Camera.main.transform.position + (Camera.main.transform.forward);
+        Debug.Log($"Forward: { Camera.main.transform.forward}");
+        ModulatorAndCoordinateParentObject.transform.position = Camera.main.transform.position + Camera.main.transform.forward;
         Vector3 lookTarget = new Vector3(Camera.main.transform.position.x,
                                          ModulatorAndCoordinateParentObject.transform.position.y,
                                          Camera.main.transform.position.z);
         ModulatorAndCoordinateParentObject.transform.LookAt(lookTarget);
 
         var meshOfCoordObj = CoordinateObject.GetComponent<MeshFilter>().mesh;
-        var newNullPosMod = CoordinateObject.transform.TransformPoint(
+        var newOrigin = CoordinateObject.transform.TransformPoint(
             meshOfCoordObj.bounds.min + new Vector3(
             meshOfCoordObj.bounds.size.x, 0, 0));
-        ModulatorObject.GetComponent<Modulator>().OriginInWorld = newNullPosMod;
+        ModulatorObject.GetComponent<Modulator>().OriginInWorld = newOrigin;
     }
 }

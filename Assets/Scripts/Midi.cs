@@ -56,7 +56,7 @@ public class Midi : MonoBehaviour
 
     public int GetPitch(Axis axis) // TODO: Oktave beschränken auf MIDI Protokoll 
     {
-        float steplenght = 128 / 12;
+        float steplenght = axis.StepResolution / 12;
         int pitch = (int)(axis.Position / steplenght);
         int pitchAndOctave = pitch + (_octave * 12);
         //Debug.Log("PITCH: " + pitchAndOctave);

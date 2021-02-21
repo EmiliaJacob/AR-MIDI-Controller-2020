@@ -294,13 +294,6 @@
       <FileName>Assets\ManoMotion ARFoundation\Scripts\InputManagerArFoundation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ArState">
-    <Position X="5" Y="12.75" Width="2.25" />
-    <TypeIdentifier>
-      <HashCode>AABAEAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\ArState.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="CoordinateSystem">
     <Position X="7.75" Y="12.75" Width="2.5" />
     <AssociationLine Name="X" Type="Axis">
@@ -325,9 +318,9 @@
       <FileName>Assets\Scripts\CoordinateSystem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
+      <Field Name="X" />
       <Field Name="Y" />
       <Field Name="Z" />
-      <Field Name="X" />
     </ShowAsAssociation>
   </Class>
   <Class Name="FollowHand">
@@ -354,8 +347,8 @@
       <FileName>Assets\Scripts\Modulator.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="CoordinateSystem" />
       <Field Name="Midi" />
+      <Field Name="CoordinateSystem" />
     </ShowAsAssociation>
   </Class>
   <Class Name="ResetAllModels">

@@ -61,7 +61,7 @@ public class CoordinateSystem : MonoBehaviour
         Z.SetStepLenghtUnity(AxesLenghtUnity.z);
     }
 
-    public Vector3 GetOrigin() //TODO: weshalb nicht gleich mit Renderer?
+    public Vector3 GetOrigin() 
     {
         var origin = transform.TransformPoint(
             _meshCoordinateSystem.bounds.min + new Vector3(

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.XR.ARFoundation;
 
 public class Modulator : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class Modulator : MonoBehaviour
 
     void Update()
     {
-        if(ArState.TrackingStateActive) // TODO: Why is it important to only do the Tracking in this state? 
+        if(ARSession.state == ARSessionState.SessionTracking) // TODO: Why is it important to only do the Tracking in this state? 
         {
             if (_modulatorMovementActive)
             {
@@ -54,10 +55,10 @@ public class Modulator : MonoBehaviour
         }
     }
 
-    public void SetToOrigin() //TODO: Methode überflüssig, da nur eine Zeile code, die bereits abstahiert genug ist?
+    public void SetToOrigin() //TODO: Weshalb Modulator nicht auf OriginInWorld setzen --> Muss auch nach Zoom geupdatet werden --> vllt momentan ein Bug beim Berechnen des Deltas. 
     {
         transform.position = CoordinateSystem.GetOrigin();
-        OriginInWorld = transform.position; // TODO: wo anders hin verschieben
+        OriginInWorld = transform.position; 
 
        // UiPosMod.text = $"x: {newPosInCoord.x}, y: {newPosInCoord.y}, z: {newPosInCoord.z}"; //TODO: verschieben
     }

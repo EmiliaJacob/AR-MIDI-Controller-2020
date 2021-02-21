@@ -1,18 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.XR.ARFoundation;
 
 public class FollowHand : MonoBehaviour
 {
     //public ArState ArState;
     //public HandTrackingInfo TrackingInfo;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
-        if(ArState.TrackingStateActive) // TODO: Why is it important to only do the Tracking in this state? 
+        if(ARSession.state == ARSessionState.SessionTracking) // TODO: Why is it important to only do the Tracking in this state? 
         {
             TrackMovement();
         }
