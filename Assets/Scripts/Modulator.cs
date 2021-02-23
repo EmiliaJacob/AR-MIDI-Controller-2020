@@ -14,7 +14,7 @@ public class Modulator : MonoBehaviour
     //public HandTrackingInfo TrackingInfos;
     public Midi Midi;
     public CoordinateSystem CoordinateSystem;
-    
+    public HandTrackingInfo HandTrackingInfo;
     void Start()
     {
         //SetToOrigin();

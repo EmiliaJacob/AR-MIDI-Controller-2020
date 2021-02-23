@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class HandTrackingInfo
+public class HandTrackingInfo : MonoBehaviour
 {
-    public static ManoGestureContinuous Gesture
+    public ManoGestureContinuous Gesture
     {
         get
         {
@@ -10,7 +10,7 @@ public class HandTrackingInfo
         }
     }
 
-    public static Vector3 PalmCenterPosition
+    public Vector3 PalmCenterPosition
     {
         get
         {
@@ -18,7 +18,7 @@ public class HandTrackingInfo
         }
     }
 
-    public static float Depth
+    public float Depth
     {
         get
         {

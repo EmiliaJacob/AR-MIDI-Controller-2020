@@ -4,7 +4,7 @@ using UnityEngine.XR.ARFoundation;
 public class FollowHand : MonoBehaviour
 {
     //public ArState ArState;
-    //public HandTrackingInfo TrackingInfo;
+    public HandTrackingInfo HandTrackingInfo;
 
     void Update()
     {
