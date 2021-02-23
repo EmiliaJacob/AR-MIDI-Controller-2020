@@ -3,17 +3,11 @@
     "m_SelectedPackage": {
         "deviceId": "2998162722047ece",
         "name": "com.manomotion.arfoundationssdkceexample",
-        "processId": 3742,
+        "processId": 10530,
         "exited": false
     },
     "m_SelectedPriority": 0,
     "m_KnownPackagesForSerialization": [
-        {
-            "deviceId": "2998162722047ece",
-            "name": "com.manomotion.arfoundationssdkceexample",
-            "processId": 14341,
-            "exited": true
-        },
         {
             "deviceId": "2998162722047ece",
             "name": "com.sec.android.app.launcher",
@@ -48,6 +42,18 @@
             "deviceId": "2998162722047ece",
             "name": "com.manomotion.arfoundationssdkceexample",
             "processId": 3742,
+            "exited": true
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.google.android.youtube",
+            "processId": 13138,
+            "exited": false
+        },
+        {
+            "deviceId": "2998162722047ece",
+            "name": "com.manomotion.arfoundationssdkceexample",
+            "processId": 10530,
             "exited": false
         },
         {

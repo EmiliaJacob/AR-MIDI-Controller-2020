@@ -6,7 +6,7 @@ public class Modulator : MonoBehaviour
 {
     private bool _modulatorMovementActive = false;
 
-    public static bool DebugMode = true;
+    public static bool DebugMode = false;
     public Vector3 OriginInWorld; 
     public GameObject ParentObject;
     public GameObject HandObject;
