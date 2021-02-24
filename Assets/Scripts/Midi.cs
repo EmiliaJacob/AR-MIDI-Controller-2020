@@ -9,8 +9,7 @@ public class Midi : MonoBehaviour
 
     public const int DEFAULT_VELOCITY = 120;
     public Modulator Modulator; 
-    public Text MidiNotSupportedPosition;
-    public Text MidiNotSupportedAxes;
+    public Text MidiNotSupportedUi;
 
     void Start()
     {
@@ -21,12 +20,9 @@ public class Midi : MonoBehaviour
             bool midiSupported = _midiPlugin.Call<bool>("UnityCheckForMidiSupport", GetContext());
         
             if(midiSupported)
-            {
-                MidiNotSupportedPosition.enabled = false;
-                MidiNotSupportedAxes.enabled = false;
-            }
-
-            _midiPlugin.Call("UnitySetupPlugin", GetContext());
+                _midiPlugin.Call("UnitySetupPlugin", GetContext());
+            else
+                MidiNotSupportedUi.enabled = true;
         }
     }
 
@@ -39,14 +35,8 @@ public class Midi : MonoBehaviour
     {
         if (axis.ChosenMessageType == "Note")
         {
-            if (GetPitch(axis) != axis.LastPlayedNote) //TODO: implement running status
-            {
+            if (GetPitch(axis) != axis.LastPlayedNote) 
                 SendNoteMessage(axis);
-            }
-            else
-            {
-                //Debug.Log("Same pitch is getting played");
-            }
         }
         else // CC Message
         {
@@ -54,12 +44,11 @@ public class Midi : MonoBehaviour
         }
     }
 
-    public int GetPitch(Axis axis) // TODO: Oktave beschränken auf MIDI Protokoll 
+    public int GetPitch(Axis axis)  
     {
         float steplenght = axis.StepResolution / 12;
         int pitch = (int)(axis.Position / steplenght);
         int pitchAndOctave = pitch + (_octave * 12);
-        //Debug.Log("PITCH: " + pitchAndOctave);
         return (pitchAndOctave);
     }
 
@@ -73,11 +62,16 @@ public class Midi : MonoBehaviour
 
     public void SendFinalNoteOffMessage(Axis axis)
     {
-        if (axis.ChosenMessageType == "Note") // TODO in Methode in eine andere Klasse verlagern
+        if (axis.ChosenMessageType == "Note") 
             _midiPlugin.Call("UnitySendMidiMessage", "NoteOff", axis.LastChosenChannel, axis.LastPlayedNote, DEFAULT_VELOCITY);
     }
     
-   public void RouteAxis(int axisIndex) // TODO: Anpassen
+    public void ResetLastPlayedNote(Axis axis)
+    {
+        axis.LastPlayedNote = -1;
+    }
+
+   public void RouteAxis(int axisIndex) 
    {
         switch (axisIndex)
         {
@@ -91,6 +85,5 @@ public class Midi : MonoBehaviour
                 _midiPlugin.Call("UnitySendMidiMessage", "Cc", Modulator.CoordinateSystem.Z.ChosenChannel, Modulator.CoordinateSystem.Z.Index, 0);
                 break;
         }
-      Debug.Log($"Axis {axisIndex}: CC-ROUTING");
    }
 }

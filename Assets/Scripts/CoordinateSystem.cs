@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,11 +28,7 @@ public class CoordinateSystem : MonoBehaviour
 
     void Start()
     {
-        //_meshCoordinateSystem = GetComponent<MeshFilter>().mesh;
-        //_rendererCoordinateSystem = GetComponent<Renderer>();
-        //
         SetupAxes();
-        //SetToInitialPosition();
     }
 
     private void SetupAxes()
@@ -50,9 +45,9 @@ public class CoordinateSystem : MonoBehaviour
         Y.AssignChannelDropdown(ChannelY);
         Z.AssignChannelDropdown(ChannelZ);
 
-        X.StepResolution = 128;
-        Y.StepResolution = 128;
-        Z.StepResolution = 128;
+        X.StepResolution = 127;
+        Y.StepResolution = 127;
+        Z.StepResolution = 127;
 
         Vector3 AxesLenghtUnity = _meshCoordinateSystem.bounds.size;
         
@@ -66,25 +61,23 @@ public class CoordinateSystem : MonoBehaviour
         var origin = transform.TransformPoint(
             _meshCoordinateSystem.bounds.min + new Vector3(
             _meshCoordinateSystem.bounds.size.x, 0, 0));
-        //var origin = _rendererCoordinateSystem.bounds.min + new Vector3(
-        //             _rendererCoordinateSystem.bounds.size.x, 0, 0);
         return origin;
     }
 
-    public void SetAxesPositionOfModulator(Vector3 modulatorPositionUnity) //TODO: renamen
+    public void SetAxesPositionOfModulator(Vector3 modulatorPositionUnity) 
     {
-      var delta = GetDeltaToOrigin(modulatorPositionUnity);
-      
-      X.Position = (int)(delta.x * X.StepLenghtInUnity);
-      Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
-      Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
+        var delta = GetDeltaToOrigin(modulatorPositionUnity);
+
+        X.Position = (int)(Math.Abs(delta.x) * X.StepLenghtInUnity);
+        Y.Position= (int)(delta.y * Y.StepLenghtInUnity);
+        Z.Position = (int)(delta.z * Z.StepLenghtInUnity);
     }
 
     private Vector3 GetDeltaToOrigin(Vector3 modulatorPositionUnity)
     {
         var origin = GetOrigin();
         var delta = transform.InverseTransformPoint(modulatorPositionUnity) -
-            transform.InverseTransformPoint(origin); // TODO: Muss es lokal sein? 
+            transform.InverseTransformPoint(origin);
         return delta;
     }
 
@@ -105,17 +98,5 @@ public class CoordinateSystem : MonoBehaviour
     {
         var closestPoint = _rendererCoordinateSystem.bounds.ClosestPoint(modulatorPosition);
         return closestPoint;
-    }
-
-   //public void UpdatePosition(int x, int y, int z)
-   //{
-   //    X.Position = x;
-   //    Y.Position = y;
-   //    Z.Position = z;
-   //}
-
-    void Update()
-    {
-        
     }
 }

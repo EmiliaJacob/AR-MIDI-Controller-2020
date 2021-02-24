@@ -18,9 +18,9 @@ public class ResetAllModels : MonoBehaviour
         ModulatorAndCoordinateParentObject.transform.LookAt(lookTarget);
 
         var meshOfCoordObj = CoordinateObject.GetComponent<MeshFilter>().mesh;
-        var newOrigin = CoordinateObject.transform.TransformPoint(
-            meshOfCoordObj.bounds.min + new Vector3(
-            meshOfCoordObj.bounds.size.x, 0, 0));
-        ModulatorObject.GetComponent<Modulator>().OriginInWorld = newOrigin;
+       // var newOrigin = CoordinateObject.transform.TransformPoint(
+       //     meshOfCoordObj.bounds.min + new Vector3(
+       //     meshOfCoordObj.bounds.size.x, 0, 0));
+        //ModulatorObject.GetComponent<Modulator>().OriginInWorld = newOrigin;
     }
 }
