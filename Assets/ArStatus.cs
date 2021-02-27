@@ -6,13 +6,14 @@ public class ArStatus : MonoBehaviour
 {
     public bool TrackingStateActive = false;
     public Text NotSupportedUi;
+    public GameObject ErrorPanel;
 
     void Start()
     {
-        ARSession.stateChanged += CheckForTrackingState;
+        ARSession.stateChanged += ArSessionStateChanged;
     }
 
-    private void CheckForTrackingState(ARSessionStateChangedEventArgs args)
+    private void ArSessionStateChanged(ARSessionStateChangedEventArgs args)
     {
         if (args.state == ARSessionState.SessionTracking)
         {
@@ -21,6 +22,7 @@ public class ArStatus : MonoBehaviour
         else if(args.state == ARSessionState.Unsupported)
         {
             NotSupportedUi.enabled = true;
+            ErrorPanel.SetActive(true);
         }
         else
         {

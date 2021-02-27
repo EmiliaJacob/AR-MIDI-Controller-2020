@@ -29,6 +29,12 @@ public class Modulator : MonoBehaviour
                     {
                         transform.position = CoordinateSystem.GetClosestPointInBoundaries(transform.position);
                     }
+
+                    CoordinateSystem.SetAxesPositionOfModulator(transform.position);
+                    CoordinateSystem.UpdateModulatorPositionUi();
+                    Midi.SendMidiMessage(CoordinateSystem.X);
+                    Midi.SendMidiMessage(CoordinateSystem.Y);
+                    Midi.SendMidiMessage(CoordinateSystem.Z);
                 }
                 else
                 {
@@ -52,12 +58,6 @@ public class Modulator : MonoBehaviour
                         Midi.ResetLastPlayedNote(CoordinateSystem.Z);
                     }
                 }
-                
-                CoordinateSystem.SetAxesPositionOfModulator(transform.position);
-                CoordinateSystem.UpdateModulatorPositionUi();
-                Midi.SendMidiMessage(CoordinateSystem.X);
-                Midi.SendMidiMessage(CoordinateSystem.Y);
-                Midi.SendMidiMessage(CoordinateSystem.Z);
             }
         }
     }

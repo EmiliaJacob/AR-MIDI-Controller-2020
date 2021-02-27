@@ -10,6 +10,7 @@ public class Midi : MonoBehaviour
     public const int DEFAULT_VELOCITY = 120;
     public Modulator Modulator; 
     public Text MidiNotSupportedUi;
+    public GameObject ErrorPanel;
 
     void Start()
     {
@@ -22,7 +23,10 @@ public class Midi : MonoBehaviour
             if(midiSupported)
                 _midiPlugin.Call("UnitySetupPlugin", GetContext());
             else
+            {
                 MidiNotSupportedUi.enabled = true;
+                ErrorPanel.SetActive(true);
+            }
         }
     }
 
