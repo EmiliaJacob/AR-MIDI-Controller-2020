@@ -165,7 +165,7 @@ public class MidiPlugin
 
         for(int i = 0; i < mDeviceInfo.getInputPortCount(); i++)
         {
-            MidiInputPort mInputPort = _mDevice.openInputPort(i); //returns null if you can't open it --> it is already open and in use with another sender
+            MidiInputPort mInputPort = _mDevice.openInputPort(i); 
             if(mInputPort != null)
             {
                 _mInputPort = mInputPort;
