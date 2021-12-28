@@ -1,4 +1,4 @@
-AR MIDI Controller for Android that uses the ManoMotionCE SDK
+AR MIDI Controller for Android that uses the ManoMotion CE SDK
 
 # Demo Videos 
 - https://www.youtube.com/watch?v=2PALtB1urh8
